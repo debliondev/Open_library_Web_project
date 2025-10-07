@@ -1,0 +1,13 @@
+.categories {
+  display: flex;
+  gap: 1rem;
+  margin: 1rem 0;
+  flex-wrap: wrap;
+}
+.category {
+  background: #8590c8;
+  color: #fff;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
