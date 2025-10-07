@@ -1,3 +1,9 @@
+import HomeTitleSection from "app/components/HomeTitleSection/HomeTitleSection";
+import Categories from "app/components/Categories/Categories";
+import BookGrid from "app/components/BookGrid/BookGrid";
+import AboutSection from "app/components/AboutSection/AboutSection";
+
+
 export const metadata = {
   title: 'The eBook Library app',
   description: 'Welcome to an Ebook library app made in Next JS',
@@ -8,7 +14,10 @@ export const metadata = {
 export default function Home() {
   return (
     <main>
-      <h1>Welcome to the eBook Library</h1>
+      <HomeTitleSection />
+      <Categories />
+      <BookGrid />
+      <AboutSection />
     </main>
   );
 }

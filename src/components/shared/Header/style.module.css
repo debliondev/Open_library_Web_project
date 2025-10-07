@@ -1,0 +1,25 @@
+.header {
+  width: 100%;
+  max-width: 400px;
+  background: #54555b;
+  color: #000;
+  border-radius: 0 0 20px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  box-sizing: border-box;
+}
+.menuBtn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+}
+.menuBtn svg {
+  width: 24px;
+  height: 24px;
+  fill: #000;
+}
