@@ -3,16 +3,17 @@
   top: 0;
   z-index: 100;
   width: 100%;
-  background: var(--black-on-light);
+  background: rgb(var(--black-on-light-rgb),0.8);
   color: var(--white-on-dark);
   border-radius: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1rem 0rem;
+  padding: 1rem 1rem;
   box-sizing: border-box;
-  opacity: 0.7;
 }
+
+
 .menuBtn {
   background: none;
   border: none;

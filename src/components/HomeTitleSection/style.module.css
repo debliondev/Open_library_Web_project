@@ -1,7 +1,7 @@
 .titleSection {
   text-align: center;
   width: 100%;
-  height: 16rem;
+  height: 18rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -9,12 +9,13 @@
 }
 
 .titleSection h1 {
-  font-size: 2rem;
+  font-size: 4rem;
   color: var(--white-on-dark);
   margin-bottom: 0.5rem;
 }
 .subtitle {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  font-family: var(--font-geist-mono), monospace;
   color: var(--white-on-dark);
 }
 
