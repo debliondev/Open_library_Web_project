@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 
-//import Header from "app/components/shared/Header/Header";
+import Header from "app/components/shared/Header/Header";
 import Footer from "app/components/shared/Footer/Footer";
 
 
@@ -30,8 +30,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Header/>
         {children}
-        <Footer />
+        <Footer/>
       </body>
     </html>
   );

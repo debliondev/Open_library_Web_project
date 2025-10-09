@@ -1,8 +1,6 @@
 .aboutSection {
-  background: #e9ebf2;
-  border-radius: 20px;
+  background: var(--white-on-dark);
   padding: 1.5rem;
-  margin: 1rem 0;
   text-align: center;
 }
 .aboutSection h2 {

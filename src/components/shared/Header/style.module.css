@@ -1,14 +1,17 @@
 .header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
   width: 100%;
-  max-width: 400px;
-  background: #54555b;
-  color: #000;
-  border-radius: 0 0 20px 20px;
+  background: var(--black-on-light);
+  color: var(--white-on-dark);
+  border-radius: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
+  padding: 1rem 1rem 0rem;
   box-sizing: border-box;
+  opacity: 0.7;
 }
 .menuBtn {
   background: none;
@@ -21,5 +24,5 @@
 .menuBtn svg {
   width: 24px;
   height: 24px;
-  fill: #000;
+  fill: var(--white-on-dark);
 }

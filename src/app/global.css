@@ -1,4 +1,14 @@
-/*body{
-    background-color: #57391b;
+:root{
+    --black-on-light: #1a1c20;
+    --white-on-dark: #e9ebf2;
+    --primary-focus: #305045;
+    --brown1-seccondary: #744d40;
+    --brown2-accent: #8f5e51;
+    --brown3-lighted: #a59476;
+}
+
+
+body{
+    background-color: var(--black-on-light);
     margin: 0;
-}*/
+}
