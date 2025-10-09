@@ -1,9 +1,9 @@
 import HomeTitleSection from "app/components/HomeTitleSection/HomeTitleSection";
 import Categories from "app/components/Categories/Categories";
-import BookGrid from "app/components/BookGrid/BookGrid";
 import AboutSection from "app/components/AboutSection/AboutSection";
 import SearchBar from "app/components/shared/SearchBar/SearchBar";
 
+import { BookGrid } from "app/components/BookGrid/BookGrid";
 
 export const metadata = {
   title: 'The eBook Library app',
