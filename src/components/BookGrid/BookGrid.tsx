@@ -1,4 +1,5 @@
 import styles from "./style.module.css";
+import Image from "next/image";
 
   // Example static books
   /*const books = [
@@ -22,9 +23,12 @@ import styles from "./style.module.css";
     return(
       <section className={styles.bookGrid}>
         {books_response.map((book:any,idx:any)=>(
-          <div key={idx} className={styles.bookCard}>
-            <h3>{book.title}</h3>
-          </div>
+          <article key={idx} className={styles.bookCard}>
+            <Image src={'https://covers.openlibrary.org/b/olid/OL31754751M-M.jpg'} width={150} height={250} alt={book.title} loading="eager"/>
+            <div>
+              <h4>{book.title}</h4>
+            </div>
+          </article>
         ))}
       </section>
     )
@@ -48,6 +52,7 @@ import styles from "./style.module.css";
 export async function BookGrid() {
   return (
     <div>
+      <p style={{color:"#fff"}}>TRENDING BOOKS</p>
       {await render_books_test()}
     </div>
   );

@@ -16,9 +16,10 @@ export default function Home() {
   return (
     <main>
       <HomeTitleSection/>
-      <section style={{backgroundColor: "#1a1c20" }}>
+      <section style={{backgroundColor: "#1a1c20", padding: "0.5rem 0"}}>
       <SearchBar/>
       <Categories />
+      <BookGrid />
       <BookGrid />
       </section>
       <AboutSection />

@@ -1,6 +1,8 @@
 .bookGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
   gap: 1rem;
   margin: 1rem;
   padding: 1rem;
@@ -8,11 +10,27 @@
 }
 .bookCard {
   background: var(--brown2-accent);
-  border-radius: 20px;
-  padding: 1rem;
+  border-radius: 10px;
+  padding: 1rem 0.5rem;
   text-align: left;
-  color: #312b30;
+  color: var(--white-on-dark);
+  display: flex;
+  flex-direction: column;
 }
+
+.bookCard div{
+  /*padding: 2rem;*/
+  height: 5rem;
+  background-color: var(--primary-focus);
+
+}
+
+.bookCard h4 {
+  text-wrap: balance;
+  font-size: 1rem;
+  line-height: 1.2;
+;}
+
 .moreBooksBtn {
   grid-column: span 2;
   background: #85c6be;
