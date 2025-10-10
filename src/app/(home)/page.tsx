@@ -3,7 +3,7 @@ import Categories from "app/components/Categories/Categories";
 import AboutSection from "app/components/AboutSection/AboutSection";
 import SearchBar from "app/components/shared/SearchBar/SearchBar";
 
-import { BookGrid } from "app/components/BookGrid/BookGrid";
+import { BookGrid } from "app/components/shared/BookGrid/BookGrid";
 
 export const metadata = {
   title: 'The eBook Library app',
