@@ -22,14 +22,40 @@
   /*padding: 2rem;*/
   height: 5rem;
   background-color: var(--primary-focus);
-
+  display: flex;
 }
 
-.bookCard h4 {
+.label{
+  margin: 1rem;
+  background-color: var(--primary-focus);
+  color: var(--white-on-dark);
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+}
+
+/*.label p{
+  background-color: var(--primary-focus);
+}*/
+
+  
+.bookTitle{
   text-wrap: balance;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 1rem;
   line-height: 1.2;
-;}
+  margin: 0.5rem;
+}
+
+
+.bookTitle:hover{
+  cursor:pointer
+}
 
 .moreBooksBtn {
   grid-column: span 2;

@@ -26,7 +26,7 @@ import Image from "next/image";
           <article key={idx} className={styles.bookCard}>
             <Image src={'https://covers.openlibrary.org/b/olid/OL31754751M-M.jpg'} width={150} height={250} alt={book.title} loading="eager"/>
             <div>
-              <h4>{book.title}</h4>
+              <h4 className={styles.bookTitle}>{book.title}</h4>
             </div>
           </article>
         ))}
@@ -51,10 +51,12 @@ import Image from "next/image";
 
 export async function BookGrid() {
   return (
-    <div>
-      <p style={{color:"#fff"}}>TRENDING BOOKS</p>
+    <section>
+      <div className={styles.label}>
+      <p>TRENDING BOOKS</p>
+      </div>
       {await render_books_test()}
-    </div>
+    </section>
   );
 }
 

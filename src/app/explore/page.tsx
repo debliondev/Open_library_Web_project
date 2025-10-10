@@ -1,6 +1,10 @@
+import SearchBar from "app/components/shared/SearchBar/SearchBar"
+
 export default function explorer(){
 
     return(
-        <h1>let's Explore some BOOKS</h1>
+        <main>
+            <SearchBar/>
+        </main>
     )
 }
