@@ -8,6 +8,11 @@
   padding: 1rem;
   background-color: var(--brown1-seccondary);
 }
+
+.bookGrid::-webkit-scrollbar{
+  display: none;
+}
+
 .bookCard {
   background: var(--brown2-accent);
   border-radius: 10px;
