@@ -1,6 +1,8 @@
 import styles from "./style.module.css";
 import Image from "next/image";
 
+import BookGridCarousel from "../BookCarousel/BookCarousel";
+
   // Example static books
   /*const books = [
     { title: "Book One", author: "Author A" },
@@ -19,7 +21,9 @@ import Image from "next/image";
       console.log("ERROR, there are no books")
     }
     console.log("BOOK DISPLAYED IN THE GRID:",books_response)
-
+    
+    return books_response
+    /*
     return(
       <section className={styles.bookGrid}>
         {books_response.map((book:any,idx:any)=>(
@@ -31,7 +35,7 @@ import Image from "next/image";
           </article>
         ))}
       </section>
-    )
+    )*/
 
     /*
     return (
@@ -50,12 +54,14 @@ import Image from "next/image";
 }
 
 export async function BookGrid() {
+  //{await render_books_test()}
+  const books = await render_books_test();
   return (
     <section>
       <div className={styles.label}>
       <p>TRENDING BOOKS</p>
       </div>
-      {await render_books_test()}
+      <BookGridCarousel books={books}/>
     </section>
   );
 }

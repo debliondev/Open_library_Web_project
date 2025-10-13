@@ -1,0 +1,61 @@
+.bookGrid {
+  display: flex;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  gap: 1rem;
+  margin: 1rem;
+  padding: 1rem;
+  /*background-color: var(--brown1-seccondary);*/
+}
+
+.bookGrid::-webkit-scrollbar{
+    display: none;
+}
+
+.bookCard {
+  background: var(--brown2-accent);
+  border-radius: 10px;
+  padding: 1rem 0.5rem;
+  text-align: left;
+  color: var(--white-on-dark);
+  display: flex;
+  flex-direction: column;
+}
+
+.bookCard div{
+  /*padding: 2rem;*/
+  height: 5rem;
+  background-color: var(--primary-focus);
+  display: flex;
+}
+
+.bookTitle{
+  text-wrap: balance;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+  line-height: 1.2;
+  margin: 0.5rem;
+}
+
+
+.bookTitle:hover{
+  cursor:pointer
+}
+
+.moreBooksBtn {
+  grid-column: span 2;
+  background: #85c6be;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
