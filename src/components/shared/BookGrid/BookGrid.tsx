@@ -36,21 +36,6 @@ import BookGridCarousel from "../BookCarousel/BookCarousel";
         ))}
       </section>
     )*/
-
-    /*
-    return (
-      <section className={styles.bookGrid}>
-        {books.map((book, idx) => (
-          <div key={idx} className={styles.bookCard}>
-            <h3>{book.title}</h3>
-            <p>{book.author}</p>
-          </div>
-        ))}
-        <button className={styles.moreBooksBtn}>More Books</button>
-      </section>
-    );
-*/
-
 }
 
 export async function BookGrid() {
