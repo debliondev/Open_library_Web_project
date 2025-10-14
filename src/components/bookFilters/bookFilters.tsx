@@ -1,12 +1,20 @@
 "use client";
 
 import styles from './style.module.css';
-
+import { useState } from 'react';
 
 export default function BookFilters() {
-
+    const [sidebarOpen, setSidebarOpen] = useState(true);
     return(
-        <aside className={styles.filters}>
+        <section>
+            <button
+                    className={styles.toggleBtn}
+                    onClick={() => setSidebarOpen(!sidebarOpen)}
+                    aria-label={sidebarOpen ? "Hide filters" : "Show filters"}
+                >
+                    {sidebarOpen ? "⮜" : "⮞"}
+            </button>
+        <aside className={`${styles.sidebar} ${sidebarOpen ? styles.open : styles.closed}`}>
             <section>
                 <h3>Categories</h3>
                 <ul>
@@ -29,6 +37,7 @@ export default function BookFilters() {
             </section>
             <button>Filter</button>
         </aside>
+        </section>
     )
 
 }
