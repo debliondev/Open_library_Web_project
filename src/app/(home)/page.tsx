@@ -19,8 +19,11 @@ export default function Home() {
       <section style={{backgroundColor: "#1a1c20", padding: "0.5rem 0"}}>
       <SearchBar/>
       <Categories />
-      <BookGrid />
-      <BookGrid />
+      <div style={{marginTop: "2rem"}}>
+        <BookGrid />
+        <BookGrid />
+        <BookGrid />
+      </div>
       </section>
       <AboutSection />
     </main>

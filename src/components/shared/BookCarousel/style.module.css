@@ -1,8 +1,8 @@
 
 .Carousel{
 display: flex;
-/*background-color: var(--brown1-seccondary);*/
-/*margin: 0rem 1rem;*/
+background: rgb(var(--brown1-seccondary-rgb), 0.4);
+margin: 0rem 1rem;
 }
 
 .bookGrid {
@@ -10,8 +10,8 @@ display: flex;
   white-space: nowrap;
   overflow-x: scroll;
   overflow-y: hidden;
-  gap: 1rem;
-  padding: 1rem;
+  gap: 0.5rem;
+  padding: 1.5rem 1rem;
 }
 
 .bookGrid::-webkit-scrollbar{
@@ -19,22 +19,18 @@ display: flex;
 }
 
 .bookCard {
-  /*background: var(--brown2-accent);*/
   background-color: var(--brown1-seccondary);
-  border-radius: 10px;
-  border: 0.2rem solid;
-  border-color: var(--primary-focus);
-  padding: 0.5rem;
   text-align: left;
   color: var(--white-on-dark);
   display: flex;
+  border-radius: 5px;
+  padding: 0.5rem;
   flex-direction: column;
 }
 
 .bookCard div{
   /*padding: 2rem;*/
-  /*background-color: var(--primary-focus);*/
-  display: flex;
+  margin: 0.5rem;
 }
 
 .bookTitle{
@@ -45,9 +41,9 @@ display: flex;
   line-clamp: 2;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 1rem;
+  font-size: 2.5vh;
   line-height: 1.2;
-  margin: 1rem 0.5rem;
+  margin: 0.5rem 0rem 1rem;
 }
 
 
@@ -71,7 +67,7 @@ display: flex;
 .scrollButtonContainer{
   display: flex;
   align-items: center;
-  background: rgb(var(--black-on-light-rgb), 0.3);
+  background: rgb(var(--black-on-light-rgb), 0.5);
 }
 
 
