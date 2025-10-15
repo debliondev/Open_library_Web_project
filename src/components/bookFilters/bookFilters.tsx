@@ -6,7 +6,7 @@ import { useState } from 'react';
 export default function BookFilters() {
     const [sidebarOpen, setSidebarOpen] = useState(true);
     return(
-        <section>
+        <section className={styles.filtersContainer}>
             <button
                     className={styles.toggleBtn}
                     onClick={() => setSidebarOpen(!sidebarOpen)}

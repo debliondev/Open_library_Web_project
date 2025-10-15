@@ -41,7 +41,8 @@ margin: 0rem 1rem;
   line-clamp: 2;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 2.5vh;
+  font-size: 2vh;
+  font-family: var(--font-geist-mono), monospace;
   line-height: 1.2;
   margin: 0.5rem 0rem 1rem;
 }

@@ -11,8 +11,6 @@
 }
 
 .mainContent {
-  flex: 1;
-  padding: 2rem 1rem;
   min-width: 0;
 }
 
