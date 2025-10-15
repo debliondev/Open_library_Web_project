@@ -19,9 +19,12 @@ display: flex;
 }
 
 .bookCard {
-  background: var(--brown2-accent);
+  /*background: var(--brown2-accent);*/
+  background-color: var(--brown1-seccondary);
   border-radius: 10px;
-  padding: 1rem 0.5rem;
+  border: 0.2rem solid;
+  border-color: var(--primary-focus);
+  padding: 0.5rem;
   text-align: left;
   color: var(--white-on-dark);
   display: flex;
@@ -30,8 +33,7 @@ display: flex;
 
 .bookCard div{
   /*padding: 2rem;*/
-  height: 5rem;
-  background-color: var(--primary-focus);
+  /*background-color: var(--primary-focus);*/
   display: flex;
 }
 
@@ -45,7 +47,7 @@ display: flex;
   text-overflow: ellipsis;
   font-size: 1rem;
   line-height: 1.2;
-  margin: 0.5rem;
+  margin: 1rem 0.5rem;
 }
 
 

@@ -31,9 +31,9 @@ export default function BookGridCarousel({ books }: { books: any[] }) {
         {books.map((book, idx) => (
           <article key={idx} className={styles.bookCard}>
             <Image
-              src={"https://covers.openlibrary.org/b/olid/OL31754751M-M.jpg"}
-              width={150}
-              height={250}
+              src={`https://covers.openlibrary.org/b/olid/${book.cover_edition_key}-L.jpg`}
+              width={180}
+              height={280}
               alt={book.title}
               loading="eager"
             />
