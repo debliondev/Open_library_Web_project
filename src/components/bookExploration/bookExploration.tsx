@@ -10,13 +10,15 @@ export default function BookExplorationPage(){
         <section className={styles.explorationContainer}>
                 <BookFilters/>
             <section className={styles.mainContent}>
-                <SearchBar/>
-                <Categories/>
-                <div style={{marginTop: "2rem"}}>
-                <BookGrid/>
-                <BookGrid/>
-                <BookGrid/>
-                </div>
+                    <SearchBar/>
+                <section style={{overscrollBehavior: "contain", height: "30rem", overflowY: "auto"}}>
+                    <Categories/>
+                    <div className={styles.booksContainer}>
+                    <BookGrid/>
+                    <BookGrid/>
+                    <BookGrid/>
+                    </div>
+                </section>
             </section>
         </section>
     )

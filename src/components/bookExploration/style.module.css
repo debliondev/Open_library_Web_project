@@ -14,6 +14,10 @@
   min-width: 0;
 }
 
+.booksContainer{
+  margin: 1rem 0rem;
+}
+
 /* Responsive 
 @media (max-width: 700px) {
   .explorationContainer {
