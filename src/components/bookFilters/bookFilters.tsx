@@ -6,13 +6,12 @@ import { useState } from 'react';
 export default function BookFilters() {
     const [sidebarOpen, setSidebarOpen] = useState(true);
     return(
-        <section className={styles.filtersContainer}>
-            <button
-                    className={styles.toggleBtn}
-                    onClick={() => setSidebarOpen(!sidebarOpen)}
-                    aria-label={sidebarOpen ? "Hide filters" : "Show filters"}
-                >
-                    {sidebarOpen ? "⮜" : "⮞"}
+        <section>
+            <button className={styles.toggleBtn}
+            onClick={() => setSidebarOpen(!sidebarOpen)}
+            aria-label={sidebarOpen ? "Hide filters" : "Show filters"}
+            >
+            {sidebarOpen ? "⮜" : "⮞"}
             </button>
         <aside className={`${styles.sidebar} ${sidebarOpen ? styles.open : styles.closed}`}>
             <section>
@@ -37,6 +36,7 @@ export default function BookFilters() {
             </section>
             <button>Filter</button>
         </aside>
+        
         </section>
     )
 

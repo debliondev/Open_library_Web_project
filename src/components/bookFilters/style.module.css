@@ -1,8 +1,4 @@
 
-.filtersContainer{
-    background-color: var(--brown3-lighted);
-}
-
 .filters{
     background-color: var(--white-on-dark);
     transition: opacity 0.3s;
@@ -39,9 +35,7 @@
   border: none;
   border-radius: 0 8px 8px 0;
   padding: 0.5rem;
-  /*position: absolute;*/
-  top: 1rem;
-  right: -2.2rem;
+  position: relative;
   cursor: pointer;
   z-index: 3;
   font-size: 1.2rem;
