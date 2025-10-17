@@ -1,7 +1,7 @@
 .explorationContainer {
   display: flex;
   flex-direction: row;
-  min-height: 80vh;
+  min-height: 90vh;
   width: 100%;
 }
 
@@ -14,9 +14,6 @@
   min-width: 0;
 }
 
-.booksContainer{
-  margin: 1rem 0rem;
-}
 
 /* Responsive 
 @media (max-width: 700px) {

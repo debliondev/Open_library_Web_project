@@ -10,8 +10,8 @@ export default function BookExplorationPage(){
         <section className={styles.explorationContainer}>
                 <BookFilters/>
             <section className={styles.mainContent}>
+                <section style={{overscrollBehavior: "contain", height: "34rem", overflowY: "auto"}}>
                     <SearchBar/>
-                <section style={{overscrollBehavior: "contain", height: "30rem", overflowY: "auto"}}>
                     <Categories/>
                     <div className={styles.booksContainer}>
                     <BookGrid/>
