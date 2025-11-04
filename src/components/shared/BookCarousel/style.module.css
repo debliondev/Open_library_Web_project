@@ -11,7 +11,7 @@ margin: 0rem 1rem;
   overflow-x: scroll;
   overflow-y: hidden;
   gap: 0.5rem;
-  padding: 1.5rem 0.5rem;
+  padding: 1rem 0.5rem;
 }
 
 .bookGrid::-webkit-scrollbar{
@@ -23,14 +23,14 @@ margin: 0rem 1rem;
   text-align: left;
   color: var(--white-on-dark);
   display: flex;
-  border-radius: 5px;
-  padding: 0.5rem;
+  /*border-radius: 5px;*/
+  padding: 0.2rem;
   flex-direction: column;
 }
 
 .bookCard div{
   /*padding: 2rem;*/
-  margin: 0.5rem;
+  margin: 0.4rem 0;
 }
 
 .bookTitle{
@@ -41,10 +41,10 @@ margin: 0rem 1rem;
   line-clamp: 2;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 2vh;
+  font-size: 1.8vh;
   font-family: var(--font-geist-mono), monospace;
   line-height: 1.2;
-  margin: 0.5rem 0rem 1rem;
+  margin: 0;
 }
 
 

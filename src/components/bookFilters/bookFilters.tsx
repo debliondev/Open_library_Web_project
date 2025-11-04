@@ -6,7 +6,7 @@ import { useState } from 'react';
 export default function BookFilters() {
     const [sidebarOpen, setSidebarOpen] = useState(true);
     return(
-        <section>
+        <section className={styles.filters}>
             <button className={styles.toggleBtn}
             onClick={() => setSidebarOpen(!sidebarOpen)}
             aria-label={sidebarOpen ? "Hide filters" : "Show filters"}
