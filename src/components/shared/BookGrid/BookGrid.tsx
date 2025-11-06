@@ -42,11 +42,11 @@ export async function BookGrid() {
   //{await render_books_test()}
   const books = await render_books_test();
   return (
-    <section className={styles.bookGrid}>
+    <section className={styles.bookGrid_container}>
+      <BookGridCarousel books={books}/>
       <div className={styles.label}>
       <p>TRENDING BOOKS</p>
       </div>
-      <BookGridCarousel books={books}/>
     </section>
   );
 }
