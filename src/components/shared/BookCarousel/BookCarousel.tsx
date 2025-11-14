@@ -16,6 +16,8 @@ export default function BookGridCarousel({ books }: { books: any[] }) {
     }
   };
 
+  //src={`https://covers.openlibrary.org/b/olid/${book.cover_edition_key}-L.jpg`}
+
   return (
     <section className={styles.Carousel}>
       <div className={styles.scrollButtonContainer}>
@@ -31,7 +33,7 @@ export default function BookGridCarousel({ books }: { books: any[] }) {
         {books.map((book, idx) => (
           <article key={idx} className={styles.bookCard}>
             <Image
-              src={`https://covers.openlibrary.org/b/olid/${book.cover_edition_key}-L.jpg`}
+              src={`https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg`}
               width={128}
               height={192}
               alt={book.title}

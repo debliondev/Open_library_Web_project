@@ -20,9 +20,9 @@ export default function Home() {
       <SearchBar/>
       <Categories />
       <div>
-        <BookGrid />
-        <BookGrid />
-        <BookGrid />
+        <BookGrid Section_title={"Fantasia"} subject_comp={"fantasy"}/>
+        <BookGrid Section_title={"Horror"} subject_comp={"HORROR"} />
+        <BookGrid Section_title={"Drama"} subject_comp={"Drama"} />
       </div>
       </section>
       <AboutSection />

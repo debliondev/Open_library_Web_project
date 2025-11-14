@@ -14,9 +14,6 @@ export default function BookExplorationPage(){
                     <SearchBar/>
                     <Categories/>
                     <div className={styles.booksContainer}>
-                    <BookGrid/>
-                    <BookGrid/>
-                    <BookGrid/>
                     </div>
                 </section>
             </section>
