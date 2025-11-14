@@ -34,7 +34,7 @@ import BookGridCarousel from "../BookCarousel/BookCarousel";
     )*/
 }
 
-export async function BookGrid({subject_comp,Section_title}) {
+export async function BookGrid({subject_comp,Section_title}:{subject_comp: string; Section_title?: string}) {
   //{await render_books_test()}
   const books = await render_books_test(subject_comp);
   console.log("SUBJECT",subject_comp)
