@@ -12,7 +12,7 @@ export default function HomeTitleSection() {
           src={background_library}
           alt="Library background"
           fill = {true}
-          style={{ objectFit: "cover", zIndex: -1, opacity: 0.4, maxHeight: "50%",borderBottom: "2px solid transparent", boxShadow: "0 5px 10px rgba(255, 255, 255, 0.4)" }}
+          style={{ objectFit: "cover", zIndex: -1, opacity: 0.36,borderBottom: "2px solid transparent", boxShadow: "0 5px 10px rgba(255, 255, 255, 0.4)" }}
           priority={true}
           />
     </section>

@@ -1,12 +1,12 @@
 .titleSection {
   text-align: center;
-  width: 100%;
+  /*width: 100%;*/
   height: 10rem;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 2rem;
+  /*margin: 1rem;*/
   /*border-bottom: 2px solid transparent;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);*/
 }

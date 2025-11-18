@@ -15,14 +15,18 @@ export const metadata = {
 export default function Home() {
   return (
     <main>
+      <section style={{paddingTop:"1rem"}}>
       <HomeTitleSection/>
-      <section style={{backgroundColor: "#1a1c20", padding: "0.5rem 0"}}>
       <SearchBar/>
+      </section>
+
+      <section style={{backgroundColor: "#1a1c20", paddingBottom:"0.5rem"}}>
       <Categories />
       <div>
-        <BookGrid Section_title={"Fantasia"} subject_comp={"fantasy"}/>
-        <BookGrid Section_title={"Horror"} subject_comp={"HORROR"} />
-        <BookGrid Section_title={"Drama"} subject_comp={"Drama"} />
+        <BookGrid Section_title={"Trending"} subject_comp={"trending"}/>
+        <BookGrid Section_title={"Horror"} subject_comp={"HORROR"}/>
+        <BookGrid Section_title={"Drama"} subject_comp={"Drama"}/>
+        <BookGrid Section_title={"Mystery"} subject_comp={"mystery"}/>
       </div>
       </section>
       <AboutSection />

@@ -1,8 +1,14 @@
 
 .Carousel{
 display: flex;
-background: rgb(var(--brown1-seccondary-rgb), 0.4);
+background: rgb(var(--brown1-seccondary-rgb), 0.6);
 margin: 0rem 1rem;
+}
+
+.Img_div{
+ /*background-color: var(--brown1-seccondary);*/
+ padding: 0.3rem;
+ /*padding-top: 0.8rem;*/
 }
 
 .bookGrid {
@@ -11,7 +17,7 @@ margin: 0rem 1rem;
   overflow-x: scroll;
   overflow-y: hidden;
   gap: 0.5rem;
-  padding: 1rem 0.5rem 1.5rem;
+  padding: 1.2rem 0.5rem;
 }
 
 .bookGrid::-webkit-scrollbar{
@@ -19,18 +25,19 @@ margin: 0rem 1rem;
 }
 
 .bookCard {
-  background-color: var(--brown1-seccondary);
+  /*background-color: var(--brown1-seccondary);*/
+  border: 2px solid;
+  border-color: var(--brown1-seccondary);
   text-align: left;
   color: var(--white-on-dark);
   display: flex;
   /*border-radius: 5px;*/
-  padding: 0.2rem;
+  padding: 0.4rem;
   flex-direction: column;
 }
 
-.bookCard div{
-  /*padding: 2rem;*/
-  margin: 0.4rem 0;
+.book_Desc{
+  padding: 0.3rem;
 }
 
 .bookTitle{
@@ -41,10 +48,24 @@ margin: 0rem 1rem;
   line-clamp: 2;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 1.8vh;
+  font-size: 1.9vh;
   font-family: var(--font-geist-mono), monospace;
   line-height: 1.2;
-  margin: 0;
+  margin: 0.5rem 0rem 1rem;
+}
+
+.bookAuthor{
+  text-wrap: balance;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1.6vh;
+  font-family: var(--font-geist-mono), monospace;
+  line-height: 1;
+  margin: 1rem 0rem;
 }
 
 

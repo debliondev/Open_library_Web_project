@@ -1,4 +1,5 @@
 "use client";
+import { Autour_One } from "next/font/google";
 import styles from "./style.module.css";
 import Image from "next/image";
 import { useRef } from "react";
@@ -32,15 +33,18 @@ export default function BookGridCarousel({ books }: { books: any[] }) {
       <div ref={scrollRef} className={styles.bookGrid}>
         {books.map((book, idx) => (
           <article key={idx} className={styles.bookCard}>
-            <Image
+            <div className={styles.Img_div}>
+            <Image style={{border:"2px solid",borderColor:"#8f5e51" }}
               src={`https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg`}
-              width={128}
-              height={192}
+              width={136}
+              height={200}
               alt={book.title}
               loading="eager"
             />
-            <div>
+            </div>
+            <div className={styles.book_Desc}>
               <h4 className={styles.bookTitle}>{book.title}</h4>
+              <p className={styles.bookAuthor}>by {book.author_name[0]}</p>
             </div>
           </article>
         ))}

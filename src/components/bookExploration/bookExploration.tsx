@@ -14,6 +14,9 @@ export default function BookExplorationPage(){
                     <SearchBar/>
                     <Categories/>
                     <div className={styles.booksContainer}>
+                        <BookGrid Section_title={"Fantasia"} subject_comp={"fantasy"}></BookGrid>
+                        <BookGrid Section_title={"Horror"} subject_comp={"HORROR"} />
+                        <BookGrid Section_title={"Drama"} subject_comp={"Drama"} />
                     </div>
                 </section>
             </section>

@@ -3,6 +3,7 @@
   flex-direction: row;
   min-height: 90vh;
   width: 100%;
+  margin-top: 1rem;
 }
 
 .filtersContent {

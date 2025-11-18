@@ -1,12 +1,15 @@
 .categories {
   display: flex;
   gap: 1rem;
-  margin: 1rem 2rem;
+  /*margin: 1rem 2rem;*/
+  padding: 1rem;
+  margin-bottom: 2rem;
   /*overflow-x: scroll;*/
   flex-wrap: wrap;
+  background-color: var(--brown1-seccondary);
 }
 .category {
-  background: #8590c8;
+  background: var(--primary-focus);
   color: #fff;
   border-radius: 20px;
   padding: 0.5rem 1rem;
