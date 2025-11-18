@@ -21,15 +21,15 @@ export default function BookGridCarousel({ books }: { books: any[] }) {
 
   return (
     <section className={styles.Carousel}>
-      <div className={styles.scrollButtonContainer}>
-      <button
-        aria-label="Scroll left"
-        onClick={() => scroll("left")}
-        className={styles.scrollButton}
-      >
-        &#8592;
-      </button>
-      </div>
+        <div className={styles.scrollButtonContainer}>
+        <button
+          aria-label="Scroll left"
+          onClick={() => scroll("left")}
+          className={styles.scrollButton}
+        >
+          &#8592;
+        </button>
+        </div>
       <div ref={scrollRef} className={styles.bookGrid}>
         {books.map((book, idx) => (
           <article key={idx} className={styles.bookCard}>
@@ -49,15 +49,15 @@ export default function BookGridCarousel({ books }: { books: any[] }) {
           </article>
         ))}
       </div>
-      <div className={styles.scrollButtonContainer}>
-      <button
-        aria-label="Scroll right"
-        onClick={() => scroll("right")}
-        className={styles.scrollButton}
-      >
-        &#8594;
-      </button>
-      </div>
+        <div className={styles.scrollButtonContainer}>
+        <button
+          aria-label="Scroll right"
+          onClick={() => scroll("right")}
+          className={styles.scrollButton}
+        >
+          &#8594;
+        </button>
+        </div>
     </section>
   );
 }
