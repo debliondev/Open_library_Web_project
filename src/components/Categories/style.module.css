@@ -3,8 +3,6 @@
   gap: 1rem;
   /*margin: 1rem 2rem;*/
   padding: 1rem;
-  margin-bottom: 2rem;
-  /*overflow-x: scroll;*/
   flex-wrap: wrap;
   background-color: var(--brown1-seccondary);
 }

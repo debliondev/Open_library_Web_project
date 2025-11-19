@@ -20,10 +20,10 @@ export async function testing_books_fetch(subject:string){
         let response
         switch(subject_url){
             case "trending":
-                response = await fetch(url_trending + '&limit=30',options)
+                response = await fetch(url_trending + '&limit=30&sort=trending',options)
             break;
             default:
-                response = await fetch(url + subject_url + '&limit=30',options)
+                response = await fetch(url + subject_url + '&limit=30&sort=trending',options)
         }
 
         const data = await response.json();

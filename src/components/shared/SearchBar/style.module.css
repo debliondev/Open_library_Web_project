@@ -4,8 +4,10 @@
   background: #e9ebf2;
   border-radius: 10px;
   padding: 0.5rem 1rem;
-  margin: 1rem 2rem;
+  margin: 0rem 2rem 1rem;
 }
+
+
 .searchBar input {
   border: none;
   background: transparent;
@@ -14,6 +16,7 @@
   outline: none;
   color: #312b30;
 }
+
 .icon {
   width: 24px;
   height: 24px;

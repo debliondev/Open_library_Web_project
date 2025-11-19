@@ -20,6 +20,10 @@ export default function BookGridCarousel({ books }: { books: any[] }) {
   //src={`https://covers.openlibrary.org/b/olid/${book.cover_edition_key}-L.jpg`}
 
   return (
+    <section>
+      <div>
+      <button>See more</button>
+      </div>
     <section className={styles.Carousel}>
         <div className={styles.scrollButtonContainer}>
         <button
@@ -58,6 +62,7 @@ export default function BookGridCarousel({ books }: { books: any[] }) {
           &#8594;
         </button>
         </div>
+    </section>
     </section>
   );
 }

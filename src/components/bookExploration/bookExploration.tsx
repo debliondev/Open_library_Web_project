@@ -4,6 +4,8 @@ import SearchBar from "../shared/SearchBar/SearchBar"
 import { BookGrid } from "../shared/BookGrid/BookGrid"
 import Categories from "../Categories/Categories"
 
+import { Book_VGrid } from "../shared/BookVerticalGrid/BookVerticalGrid"
+
 export default function BookExplorationPage(){
 
     return(
@@ -14,6 +16,7 @@ export default function BookExplorationPage(){
                     <SearchBar/>
                     <Categories/>
                     <div className={styles.booksContainer}>
+                        <Book_VGrid subject_comp={"Horror"}/>
                         <BookGrid Section_title={"Fantasia"} subject_comp={"fantasy"}></BookGrid>
                         <BookGrid Section_title={"Horror"} subject_comp={"HORROR"} />
                         <BookGrid Section_title={"Drama"} subject_comp={"Drama"} />

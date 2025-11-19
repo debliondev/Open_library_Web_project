@@ -1,8 +1,12 @@
 
 .Carousel{
 display: flex;
-/*background: rgb(var(--brown1-seccondary-rgb), 0.6);*/
-margin: 0rem 1rem;
+position: relative;
+margin: 0rem 0.5rem;
+}
+
+.Carousel:hover .scrollButtonContainer{
+  visibility: visible;
 }
 
 .Img_div{
@@ -74,7 +78,6 @@ margin: 0rem 1rem;
 }
 
 .moreBooksBtn {
-  grid-column: span 2;
   background: #85c6be;
   color: #fff;
   border: none;
@@ -87,17 +90,40 @@ margin: 0rem 1rem;
 
 
 .scrollButtonContainer{
-  display: flex;
   z-index: 4;
+  display: flex;
+  visibility: hidden;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  align-items: center;
+  justify-content: center;
+  /*width: 2.8rem;*/
+  height: 95%;
+  pointer-events: auto;
+  /*background-color: rgb(var(--brown1-seccondary-rgb), 0.6);*/
 }
 
+.scrollButtonContainer:first-child{
+  left: -3;
+}
+
+.scrollButtonContainer:last-child{
+  right: -3;
+}
 
 .scrollButton{
-  z-index: 2;
-  background: rgb(0,0,0, 0.1);
+  z-index: 6;
+  background: rgb(0,0,0, 0.3);
   color: var(--white-on-dark);
   border:none;
   width: 2.5rem;
-  /*height: 2.5rem;*/
+  height: 100%;
   cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.scrollButton:hover{
+  background: rgb(0,0,0, 0.6);
 }
