@@ -1,10 +1,10 @@
 import styles from "./style.module.css"
 import BookFilters from "../bookFilters/bookFilters"
 import SearchBar from "../shared/SearchBar/SearchBar"
-import { BookGrid } from "../shared/BookGrid/BookGrid"
+import { BookCarousel } from "../shared/BookCarousel/BookCarousel"
 import Categories from "../Categories/Categories"
 
-import { Book_VGrid } from "../shared/BookVerticalGrid/BookVerticalGrid"
+import { BookGrid } from "../shared/BookGrid/BookGrid"
 
 export default function BookExplorationPage(){
 
@@ -16,10 +16,9 @@ export default function BookExplorationPage(){
                     <SearchBar/>
                     <Categories/>
                     <div className={styles.booksContainer}>
-                        <Book_VGrid subject_comp={"Horror"}/>
-                        <BookGrid Section_title={"Fantasia"} subject_comp={"fantasy"}></BookGrid>
-                        <BookGrid Section_title={"Horror"} subject_comp={"HORROR"} />
-                        <BookGrid Section_title={"Drama"} subject_comp={"Drama"} />
+                        <BookGrid subject_comp={"Horror"}/>
+                        <BookCarousel Section_title={"Horror"} subject_comp={"HORROR"} />
+                        <BookCarousel Section_title={"Drama"} subject_comp={"Drama"} />
                     </div>
                 </section>
             </section>

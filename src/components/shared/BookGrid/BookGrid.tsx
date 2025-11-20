@@ -1,51 +1,44 @@
+"use client"
+
 import styles from "./style.module.css";
-//import Image from "next/image";
 
 import { testing_books_fetch } from "app/services/open_library/books";
 
-import BookGridCarousel from "../BookCarousel/BookCarousel";
+import Image from "next/image";
 
-  async function render_books_test(subject_parameter:string){
+
+async function render_books(subject_parameter:string){
     console.log("PARAMETER", subject_parameter)
     const books = await testing_books_fetch(subject_parameter);
-    //const {books} = await response.json();
-    //const books_response = books.works;
     const books_response = books.docs;
     console.log("RESPONSE",books_response.length)
-
     if (books_response === undefined) {
       console.log("ERROR, there are no books")
     }
-    //console.log("BOOK DISPLAYED IN THE GRID:",books_response)
-    
     return books_response
-    /*
+}
+
+export async function BookGrid({subject_comp}:{subject_comp: string;}){
+    const books = await render_books(subject_comp);
     return(
-      <section className={styles.bookGrid}>
-        {books_response.map((book:any,idx:any)=>(
+        <section>
+            {books.map((book:any, idx:number) => (
           <article key={idx} className={styles.bookCard}>
-            <Image src={'https://covers.openlibrary.org/b/olid/OL31754751M-M.jpg'} width={150} height={250} alt={book.title} loading="eager"/>
-            <div>
+            <div className={styles.Img_div}>
+            <Image style={{border:"2px solid",borderColor:"#8f5e51" }}
+              src={`https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg`}
+              width={136}
+              height={200}
+              alt={book.title}
+              loading="eager"
+            />
+            </div>
+            <div className={styles.book_Desc}>
               <h4 className={styles.bookTitle}>{book.title}</h4>
+              <p className={styles.bookAuthor}>by {book.author_name[0]}</p>
             </div>
           </article>
         ))}
-      </section>
-    )*/
+        </section>
+    )
 }
-
-export async function BookGrid({subject_comp,Section_title}:{subject_comp: string; Section_title?: string}) {
-  //{await render_books_test()}
-  const books = await render_books_test(subject_comp);
-  console.log("SUBJECT",subject_comp)
-  return (
-    <section className={styles.bookGrid_container}>
-      <BookGridCarousel books={books}/>
-      <div className={styles.label}>
-      <p>{Section_title}</p>
-      </div>
-    </section>
-  );
-}
-
-

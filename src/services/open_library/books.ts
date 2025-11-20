@@ -17,7 +17,7 @@ export async function testing_books_fetch(subject:string){
     try {
         const subject_url = subject.toLowerCase()
         //const response = await fetch(url_subjects + `${subject_url}.json`, options);
-        let response
+        let response: Response
         switch(subject_url){
             case "trending":
                 response = await fetch(url_trending + '&limit=30&sort=trending',options)
@@ -26,11 +26,17 @@ export async function testing_books_fetch(subject:string){
                 response = await fetch(url + subject_url + '&limit=30&sort=trending',options)
         }
 
+        if (!response.ok){
+            console.error("Server Returned non-ok status")
+            return {docs: []};
+        }
+
         const data = await response.json();
         console.log("Data Response: ",response)
-        return data;
+        return data ?? {docs:[]};
     }catch (error) {
         console.log("Hubo un error :",error)
+        return {docs: []}
     }
 }
 
