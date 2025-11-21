@@ -4,7 +4,7 @@ import SearchBar from "../shared/SearchBar/SearchBar"
 import { BookCarousel } from "../shared/BookCarousel/BookCarousel"
 import Categories from "../Categories/Categories"
 
-import { BookGrid } from "../shared/BookGrid/BookGrid"
+import BooksGrid from "../shared/BooksGrid/BooksGrid"
 
 export default function BookExplorationPage({
     searchParams,
@@ -20,7 +20,7 @@ export default function BookExplorationPage({
                     <SearchBar/>
                     <Categories/>
                     <div className={styles.booksContainer}>
-                        <BookGrid searchQuery={q || undefined}/>
+                        <BooksGrid PathParams={{query:q}}></BooksGrid>
                         <BookCarousel Section_title={"Horror"} subject_comp={"HORROR"} />
                         <BookCarousel Section_title={"Drama"} subject_comp={"Drama"} />
                     </div>

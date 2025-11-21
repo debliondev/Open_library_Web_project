@@ -8,10 +8,11 @@ const url_trending = "https://openlibrary.org/search.json?q=trending_score_hourl
 const options = {
     method: 'GET',
     headers: {
-        'Content-Type': 'application/json'
-    }
+        'Content-Type': 'application/json',
+    },
 }
 
+//cache: 'no-cache'
 async function fetch_books(subject:string){
     try {
         const subject_url = subject.toLowerCase()

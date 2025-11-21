@@ -1,37 +1,45 @@
 "use client";
 
-import { useState } from "react";
-import { useRouter } from "next/navigation";
-
+import React, { useState } from "react";
 import styles from "./style.module.css";
+import { useRouter, useSearchParams } from "next/navigation";
 
-export default function SearchBar({explore_page = false,onSearch,}:{explore_page?: boolean;onSearch?:(q:string) => void;}) {
 
-  const [query, setQuery] = useState("");
+export default function SearchBar({ explore_page = false }: { explore_page?: boolean }) {
+  const searchParams = useSearchParams();
+
+  const [query, setQuery] = useState<string>(searchParams?.get("q") ?? "");
   const router = useRouter();
 
-  const submit = (e: React.FormEvent) => {
-    e.preventDefault();
-    const q = query.trim();
-    if (!q) return;
+  const submit_input = (input: React.FormEvent) => {
+    input.preventDefault();
+    const URLquery = query?.trim();
+    if (!URLquery) return;
 
+    // If not already on explore, navigate to /explore?q=… so the server page can render
     if (!explore_page) {
-      // redirect to /explore with query param so the explore page can render BookGrid with searchQuery
-      router.push(`/explore?q=${encodeURIComponent(q)}`);
+      router.push(`/explore?q=${encodeURIComponent(URLquery)}`);
       return;
     }
 
-    // if we're already on explore (explore_page === true), call the handler if provided
-    if (typeof onSearch === "function") {
-      onSearch(q);
-    }
+    // If on explore page we keep the param in the URL (server will handle rendering). Use replace to avoid history spam
+    router.replace(`/explore?q=${encodeURIComponent(URLquery)}`);
   };
 
   return (
-    <form className={styles.searchBar} onSubmit={submit}>
-      <input value={query} onChange={(e) => setQuery(e.target.value)} type="text" placeholder="Search books..." aria-label="Search books" />
+    <form className={styles.searchBar} onSubmit={submit_input}>
+      <input
+        type="text"
+        value={query}
+        placeholder="searching books..."
+        onChange={(e) => setQuery(e.target.value)}
+        aria-label="Search books"
+      />
       <button type="submit">
-      <svg viewBox="0 0 24 24" className={styles.icon}><circle cx="11" cy="11" r="8" stroke="#5973bf" strokeWidth="2" fill="none"/><line x1="21" y1="21" x2="16.65" y2="16.65" stroke="#5973bf" strokeWidth="2"/></svg>
+        <svg viewBox="0 0 24 24" className={styles.icon}>
+          <circle cx="11" cy="11" r="8" stroke="#5973bf" strokeWidth="2" fill="none" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="#5973bf" strokeWidth="2" />
+        </svg>
       </button>
     </form>
   );

@@ -1,9 +1,11 @@
-import BookExplorationPage from "app/components/bookExploration/bookExploration"
+import BookExplorationPage from "app/components/bookExploration/bookExploration";
 
-export default function explorer(){
-    return(
+export default function explorer({ searchParams, }: { searchParams?: { q?: string } }) {
+    const q = (searchParams?.q ?? "").toString();
+    console.log("BOOK PARAMS", q);
+    return (
         <main>
-            <BookExplorationPage/>
+            <BookExplorationPage searchParams={{ q }} />
         </main>
-    )
+    );
 }
