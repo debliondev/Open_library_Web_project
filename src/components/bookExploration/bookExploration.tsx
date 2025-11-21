@@ -6,8 +6,12 @@ import Categories from "../Categories/Categories"
 
 import { BookGrid } from "../shared/BookGrid/BookGrid"
 
-export default function BookExplorationPage(){
-
+export default function BookExplorationPage({
+    searchParams,
+}:{
+    searchParams?: {q?:string}
+}){
+    const q = (searchParams?.q ?? "")
     return(
         <section className={styles.explorationContainer}>
                 <BookFilters/>
@@ -16,7 +20,7 @@ export default function BookExplorationPage(){
                     <SearchBar/>
                     <Categories/>
                     <div className={styles.booksContainer}>
-                        <BookGrid subject_comp={"Horror"}/>
+                        <BookGrid searchQuery={q || undefined}/>
                         <BookCarousel Section_title={"Horror"} subject_comp={"HORROR"} />
                         <BookCarousel Section_title={"Drama"} subject_comp={"Drama"} />
                     </div>
