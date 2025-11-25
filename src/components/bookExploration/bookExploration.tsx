@@ -1,5 +1,5 @@
 import styles from "./style.module.css"
-import BookFilters from "../bookFilters/bookFilters"
+//import BookFilters from "../bookFilters/bookFilters"
 import SearchBar from "../shared/SearchBar/SearchBar"
 import { BookCarousel } from "../shared/BookCarousel/BookCarousel"
 import Categories from "../Categories/Categories"
@@ -14,7 +14,6 @@ export default function BookExplorationPage({
     const q = (searchParams?.q ?? "")
     return(
         <section className={styles.explorationContainer}>
-                <BookFilters/>
             <section className={styles.mainContent}>
                 <section style={{overscrollBehavior: "contain", height: "34rem", overflowY: "auto"}}>
                     <SearchBar/>
