@@ -24,7 +24,7 @@ export default function BookCardsCarousel({ books }: { books: any[] }) {
 
   return (
     <section>
-      <div>
+      <div className={styles.SeeMoreButton}>
       <button>See more</button>
       </div>
     <section className={styles.Carousel}>
@@ -37,7 +37,7 @@ export default function BookCardsCarousel({ books }: { books: any[] }) {
           &#8592;
         </button>
         </div>
-      <div ref={scrollRef} className={styles.bookGrid}>
+      <div ref={scrollRef} className={styles.bookCardsContainer}>
         {bookList.length === 0 ?(
           <div>Error, no books were found</div>
         ):(
@@ -52,12 +52,12 @@ export default function BookCardsCarousel({ books }: { books: any[] }) {
               loading="eager"
             />
             </div>
-            <section className={styles.book_Desc}>
-              <div style={{marginBottom:"1rem"}}>
+            <section className={styles.bookDesc}>
+              <div className={styles.Desc_Container}>
                 <h4 className={styles.bookTitle}>{book.title}</h4>
                 <p className={styles.bookAuthor}>by {book?.author_name?.[0] ?? "Error: Unknown Author"}</p>
               </div>
-              <div>
+              <div style={{marginTop:"1rem"}}>
                 <p className={styles.bookAccess}>{book?.ebook_access ?? "unclassified"}</p>
               </div>
             </section>

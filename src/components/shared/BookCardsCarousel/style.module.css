@@ -1,4 +1,24 @@
 
+.SeeMoreButton{
+  display: flex;
+  justify-content: end;
+  margin: 0rem 0.5rem;
+}
+
+.SeeMoreButton button{
+  font-size: 1rem;
+  background: none;
+  border: none;
+  color: var(--white-on-dark);
+  font-family: var(--font-geist-mono);
+}
+
+.SeeMoreButton button:hover{
+  cursor: pointer;
+  color: var(--brown3-lighted);
+  font-size: 1.2rem;
+}
+
 .Carousel{
 display: flex;
 position: relative;
@@ -14,7 +34,7 @@ margin: 0rem 0.5rem;
  /*padding-top: 0.8rem;*/
 }
 
-.bookGrid {
+.bookCardsContainer {
   display: flex;
   white-space: nowrap;
   overflow-x: scroll;
@@ -23,7 +43,7 @@ margin: 0rem 0.5rem;
   padding: 0.5rem 0rem;
 }
 
-.bookGrid::-webkit-scrollbar{
+.bookCardsContainer::-webkit-scrollbar{
     display: none;
 }
 
@@ -40,10 +60,16 @@ margin: 0rem 0.5rem;
   flex-direction: column;
 }
 
-.book_Desc{
-  padding: 0rem 0.3rem 0.3rem;
+.bookDesc{
+  /*padding: 0rem 0.3rem 0.3rem;*/
   display: flex;
   flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.Desc_Container{
+  padding: 0rem 0.3rem 0.3rem;
 }
 
 .bookTitle{
@@ -79,7 +105,7 @@ margin: 0rem 0.5rem;
 .bookAccess{
   background-color: var(--brown2-accent) ;
   margin: 0;
-  padding: 0.4rem 0rem;
+  padding: 0.3rem 0.4rem;
   font-size: 1.8vh;
   font-family: var(--font-geist-mono), monospace;
 }
