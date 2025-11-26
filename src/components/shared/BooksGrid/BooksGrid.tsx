@@ -3,12 +3,13 @@ import Image from "next/image";
 import { fetch_books_search } from "app/services/open_library/books";
 
 export default async function BooksGrid({ PathParams, }: { PathParams?: { query?: string } | string }) {
-    // support either PathParams object or direct string for easier calling
+    //Support PathParams object or direct string for calling
     const query = typeof PathParams === "string" ? PathParams : PathParams?.query ?? "";
     console.log("QUERY", query);
 
     const data = await fetch_books_search(query);
-    // normalize different API shapes: search.json returns {docs: []} while other endpoints may return {works: []}
+
+    //different API shapes: search.json returns {docs: []} while other endpoints may return {works: []}
     const items = (data && (data.docs ?? data.works)) || [];
     const booksList = Array.isArray(items) ? items : [];
 

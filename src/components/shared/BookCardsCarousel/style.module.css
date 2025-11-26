@@ -36,12 +36,14 @@ margin: 0rem 0.5rem;
   color: var(--white-on-dark);
   display: flex;
   /*border-radius: 5px;*/
-  padding: 0.4rem;
+  padding: 0.2rem;
   flex-direction: column;
 }
 
 .book_Desc{
-  padding: 0.3rem;
+  padding: 0rem 0.3rem 0.3rem;
+  display: flex;
+  flex-direction: column;
 }
 
 .bookTitle{
@@ -52,10 +54,11 @@ margin: 0rem 0.5rem;
   line-clamp: 2;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 1.9vh;
+  /*font-size: 1.9vh;*/
+  font-size: 0.8rem;
   font-family: var(--font-geist-mono), monospace;
   line-height: 1.2;
-  margin: 0.5rem 0rem 1rem;
+  margin: 0rem 0rem 0.2rem;
 }
 
 .bookAuthor{
@@ -69,9 +72,17 @@ margin: 0rem 0.5rem;
   font-size: 1.6vh;
   font-family: var(--font-geist-mono), monospace;
   line-height: 1;
-  margin: 1rem 0rem;
+  margin: 0.5rem 0rem;
+  /*margin: 1rem 0rem;*/
 }
 
+.bookAccess{
+  background-color: var(--brown2-accent) ;
+  margin: 0;
+  padding: 0.4rem 0rem;
+  font-size: 1.8vh;
+  font-family: var(--font-geist-mono), monospace;
+}
 
 .bookTitle:hover{
   cursor:pointer

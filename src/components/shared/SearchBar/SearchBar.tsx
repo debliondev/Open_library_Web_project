@@ -16,13 +16,13 @@ export default function SearchBar({ explore_page = false }: { explore_page?: boo
     const URLquery = query?.trim();
     if (!URLquery) return;
 
-    // If not already on explore, navigate to /explore?q=… so the server page can render
+    // If not already on explore, navigate to /explore?q=…
     if (!explore_page) {
       router.push(`/explore?q=${encodeURIComponent(URLquery)}`);
       return;
     }
 
-    // If on explore page we keep the param in the URL (server will handle rendering). Use replace to avoid history spam
+    // If on explore page we keep the param in the URL (.replace to avoid history spam)
     router.replace(`/explore?q=${encodeURIComponent(URLquery)}`);
   };
 

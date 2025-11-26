@@ -18,7 +18,7 @@ export default function BookCardsCarousel({ books }: { books: any[] }) {
     }
   };
 
-  const items = Array.isArray(books) ? books : [];
+  const bookList = Array.isArray(books) ? books : [];
 
   //src={`https://covers.openlibrary.org/b/olid/${book.cover_edition_key}-L.jpg`}
 
@@ -38,7 +38,10 @@ export default function BookCardsCarousel({ books }: { books: any[] }) {
         </button>
         </div>
       <div ref={scrollRef} className={styles.bookGrid}>
-        {items.map((book, idx) => (
+        {bookList.length === 0 ?(
+          <div>Error, no books were found</div>
+        ):(
+          bookList.map((book: any, idx: number) => (
           <article key={idx} className={styles.bookCard}>
             <div className={styles.Img_div}>
             <Image style={{border:"2px solid",borderColor:"#8f5e51" }}
@@ -49,12 +52,18 @@ export default function BookCardsCarousel({ books }: { books: any[] }) {
               loading="eager"
             />
             </div>
-            <div className={styles.book_Desc}>
-              <h4 className={styles.bookTitle}>{book.title}</h4>
-              <p className={styles.bookAuthor}>by {book?.author_name?.[0] ?? "Error: Unknown Author"}</p>
-            </div>
+            <section className={styles.book_Desc}>
+              <div style={{marginBottom:"1rem"}}>
+                <h4 className={styles.bookTitle}>{book.title}</h4>
+                <p className={styles.bookAuthor}>by {book?.author_name?.[0] ?? "Error: Unknown Author"}</p>
+              </div>
+              <div>
+                <p className={styles.bookAccess}>{book?.ebook_access ?? "unclassified"}</p>
+              </div>
+            </section>
           </article>
-        ))}
+        ))
+        )}
       </div>
         <div className={styles.scrollButtonContainer}>
         <button

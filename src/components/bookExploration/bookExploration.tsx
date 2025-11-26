@@ -16,7 +16,7 @@ export default function BookExplorationPage({
         <section className={styles.explorationContainer}>
             <section className={styles.mainContent}>
                 <section style={{overscrollBehavior: "contain", height: "34rem", overflowY: "auto"}}>
-                    <SearchBar/>
+                    <SearchBar explore_page = {true}/>
                     <Categories/>
                     <div className={styles.booksContainer}>
                         <BooksGrid PathParams={{query:q}}></BooksGrid>

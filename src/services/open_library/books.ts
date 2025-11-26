@@ -12,7 +12,6 @@ const options = {
     },
 }
 
-//cache: 'no-cache'
 async function fetch_books(subject:string){
     try {
         const subject_url = subject.toLowerCase()
@@ -46,11 +45,11 @@ async function fetch_books_search(input:string){
         if(!input){
             return {docs:[]};
         }
-        const response = await fetch(url + 'q=' + encodeURIComponent(input),options)
+        const response = await fetch(url + 'q=' + encodeURIComponent(input) + '&sort=trending',options)
 
         if (!response.ok){
-            console.error("Server Returned non-ok status")
-            console.log(response.status)
+            console.log("Server Returned non-ok status")
+            console.log("STATUS",response.status)
             return {docs: []};
         }
 
