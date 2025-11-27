@@ -13,6 +13,15 @@
   box-sizing: border-box;
 }
 
+.HeaderTitle{
+  font-weight: 600;
+  color: var(--white-on-dark);
+}
+
+.HeaderTitle:hover{
+  color: var(--brown3-lighted);
+}
+
 
 .menuBtn {
   background: none;

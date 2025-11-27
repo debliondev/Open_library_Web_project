@@ -9,7 +9,8 @@ const options = {
     method: 'GET',
     headers: {
         'Content-Type': 'application/json',
-    },
+        'User-Agent': 'Virtual Library/1.0 (@gmail.com)'
+    }
 }
 
 async function fetch_books(subject:string){

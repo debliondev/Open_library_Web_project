@@ -5,15 +5,17 @@
   /*margin: 1rem 2rem;*/
   padding: 1rem;
   flex-wrap: wrap;
-  background-color: var(--brown1-seccondary);
+  /*background-color: var(--brown1-seccondary)*/
 }
+
 .category {
   background: var(--primary-focus);
+  font-family: var(--font-geist-mono), monospace;
   color: #fff;
-  border-radius: 20px;
+  border-radius: 10px;
   border: none;
   padding: 0.5rem 1rem;
-  font-size: 1rem;
+  font-size: 0.8rem;
 }
 
 .category:hover{

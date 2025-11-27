@@ -28,6 +28,10 @@ export default function SearchBar({ explore_page = false }: { explore_page?: boo
 
   return (
     <form className={styles.searchBar} onSubmit={submit_input}>
+        <svg viewBox="0 0 24 24" className={styles.icon}>
+          <circle cx="11" cy="11" r="8" stroke="#5973bf" strokeWidth="2" fill="none" />
+          <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="#5973bf" strokeWidth="2" />
+        </svg>
       <input
         type="text"
         value={query}
@@ -35,11 +39,8 @@ export default function SearchBar({ explore_page = false }: { explore_page?: boo
         onChange={(e) => setQuery(e.target.value)}
         aria-label="Search books"
       />
-      <button type="submit">
-        <svg viewBox="0 0 24 24" className={styles.icon}>
-          <circle cx="11" cy="11" r="8" stroke="#5973bf" strokeWidth="2" fill="none" />
-          <line x1="21" y1="21" x2="16.65" y2="16.65" stroke="#5973bf" strokeWidth="2" />
-        </svg>
+      <button className={styles.SearchBttn} type="submit">
+        <p>Search</p>
       </button>
     </form>
   );
