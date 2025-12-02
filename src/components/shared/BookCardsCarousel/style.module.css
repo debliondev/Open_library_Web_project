@@ -11,6 +11,8 @@
   border: none;
   color: var(--white-on-dark);
   font-family: var(--font-geist-mono);
+  display: flex;
+  align-items: center;
 }
 
 .SeeMoreButton button:hover{
