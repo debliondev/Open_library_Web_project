@@ -1,47 +1,36 @@
 .bookGrid{
-    /* Mobile-first: single column list that becomes a grid on larger screens */
     display: grid;
     grid-template-columns: 1fr;
-    gap: 0.75rem;
+    gap: 0.7rem;
     padding: 0.5rem;
     box-sizing: border-box;
 }
 
 .bookCard{
     display: flex;
-    flex-direction: column;
     gap: 0.6rem;
     align-items: center;
     background-color: rgb(var(--brown1-seccondary-rgb), 0.5);
     border: 1px solid var(--brown1-seccondary);
-    padding: 0.6rem;
+    padding: 1.5rem 0.5rem;
     border-radius: 5px;
 }
 
-/*
-.Img_div{
-    flex: 0 0 90px;
-    width: 90px;
-    height: 130px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    border-radius: 6px;
-}
-
 .book_Desc{
-    flex: 1 1 auto;
-    min-width: 0;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-*/
 .bookTitle{
     margin: 0 0 0.35rem 0;
     font-size: 1rem;
     line-height: 1.2;
     font-weight: 600;
     color: var(--white-on-dark);
+    font-family: var(--font-geist-mono), monospace;
     display: -webkit-box;
     -webkit-line-clamp: 2;
     line-clamp: 2;
@@ -50,10 +39,33 @@
     text-overflow: ellipsis;
 }
 
-.bookAuthor{
-    margin: 0;
-    font-size: 0.9rem;
+.bookInfo p{
+    margin: 0.2rem 0;
+    font-size: 0.8rem;
+    font-family: var(--font-geist-mono), monospace;
     color: rgba(233,235,242,0.8);
+}
+
+.bookAccess{
+    padding: 0.3rem 0.4rem;
+    background-color: var(--brown2-accent) ;
+    font-size: 0.8rem;
+    color: var(--white-on-dark);
+    font-family: var(--font-geist-mono), monospace;
+}
+
+.GetEbookBtt{
+    margin-bottom: 0.4rem;
+    padding: 0.4rem;
+    width: 100%;
+    background-color: var(--primary-focus);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.85rem;
+    font-family: var(--font-geist-mono), monospace;
+    cursor: pointer;
+    transition: background-color 180ms ease;
 }
 
 /* Tablet and up: 2 columns */
@@ -69,13 +81,13 @@
 @media (min-width: 1024px) {
     .bookGrid {
         grid-template-columns: repeat(3, 1fr);
-        gap: 1.25rem;
+        gap: 1rem 0.6rem;
         padding: 1rem 1.25rem;
     }
 }
 
 @media (min-width: 1400px) {
     .bookGrid {
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(3, 1fr);
     }
 }

@@ -23,25 +23,36 @@ export default async function BooksGrid({ PathParams, }: { PathParams?: { query?
                     const imgSrc = coverId
                         ? `https://covers.openlibrary.org/b/id/${coverId}-L.jpg`
                         : "/images/placeholder-book.png";
-                    const title = book.title ?? book.title_suggest ?? "Untitled";
+                    const title = book.title ?? "Untitled";
+                    const ReleaseYear = book.first_publish_year ?? "N/A";
+                    const bookAccess = book.ebook_access?? "unclassified";
                     const author = Array.isArray(book.author_name) ? book.author_name[0] : book.authors?.[0]?.name ?? "Unknown";
 
+                    //borderColor: "#8f5e51" 
                     return (
                         <article key={book.key ?? coverId ?? idx} className={styles.bookCard}>
                             <div className={styles.Img_div}>
                                 <Image
-                                    style={{ border: "2px solid", borderColor: "#8f5e51" }}
+                                    style={{ border: "2px solid"
+                                    }}
                                     src={imgSrc}
-                                    width={136}
-                                    height={200}
+                                    width={156}
+                                    height={220}
                                     alt={title}
                                     loading="eager"
                                 />
                             </div>
-                            <div className={styles.book_Desc}>
+                            <section className={styles.book_Desc}>
+                            <div className={styles.bookInfo}>
                                 <h4 className={styles.bookTitle}>{title}</h4>
-                                <p className={styles.bookAuthor}>by {author}</p>
+                                <p>by {author}</p>
+                                <p>{ReleaseYear}</p>
                             </div>
+                            <div style={{width:"100%"}}>
+                                <p className={styles.bookAccess}>{bookAccess}</p>
+                                <button className={styles.GetEbookBtt}>Get ebook</button>
+                            </div>
+                            </section>
                         </article>
                     );
                 })

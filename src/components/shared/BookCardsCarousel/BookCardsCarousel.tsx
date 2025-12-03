@@ -17,11 +17,12 @@ export default function BookCardsCarousel({ books }: { books: any[] }) {
       });
     }
   };
-
+  
   const bookList = Array.isArray(books) ? books : [];
 
   //src={`https://covers.openlibrary.org/b/olid/${book.cover_edition_key}-L.jpg`}
 
+  //borderColor:"#8f5e51"
   return (
     <section>
       <Suspense>
@@ -49,7 +50,7 @@ export default function BookCardsCarousel({ books }: { books: any[] }) {
             bookList.map((book: any, idx: number) => (
             <article key={idx} className={styles.bookCard}>
               <div className={styles.Img_div}>
-              <Image style={{border:"2px solid",borderColor:"#8f5e51" }}
+              <Image style={{border:"2px solid" }}
                 src={`https://covers.openlibrary.org/b/id/${book.cover_i}-L.jpg`}
                 width={136}
                 height={200}

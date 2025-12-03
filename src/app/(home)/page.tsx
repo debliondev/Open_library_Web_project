@@ -19,14 +19,16 @@ export default function Home() {
       <HomeTitleSection/>
       </section>
 
-      <section style={{backgroundColor: "#1a1c20", paddingBottom:"0.5rem"}}>
-      <Categories />
-      <div>
-        <BookCarousel Section_title={"Trending"} subject_comp={"trending"}/>
-        <BookCarousel Section_title={"Horror"} subject_comp={"horror"}/>
-        <BookCarousel Section_title={"Drama"} subject_comp={"Drama"}/>
-        <BookCarousel Section_title={"Mystery"} subject_comp={"mystery"}/>
-      </div>
+      <section>
+        <Categories />
+        <section style={{backgroundColor: "#1a1c20", padding: "1rem 0rem"}}>
+        <div>
+          <BookCarousel Section_title={"Trending"} subject_comp={"trending"}/>
+          <BookCarousel Section_title={"Horror"} subject_comp={"horror"}/>
+          <BookCarousel Section_title={"Drama"} subject_comp={"Drama"}/>
+          <BookCarousel Section_title={"Mystery"} subject_comp={"mystery"}/>
+        </div>
+        </section>
       </section>
       <AboutSection />
     </main>
