@@ -16,8 +16,21 @@
   border: none;
   padding: 0.5rem 1rem;
   font-size: 0.8rem;
+
+  transition: transform 180ms ease, background-color 180ms ease;
+  transform-origin: center;
+  will-change: transform;
+
+
+  outline: none;
+  cursor: pointer;
+
 }
 
 .category:hover{
   cursor: pointer;
+
+  transform: translateY(-4px) scale(1.03);
+  background-color: color-mix(in srgb, var(--primary-focus) 82%, white 18%);
+  color: var(--white-on-dark);
 }

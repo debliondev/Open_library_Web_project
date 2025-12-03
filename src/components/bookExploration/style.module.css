@@ -15,6 +15,9 @@
   min-width: 0;
 }
 
+.booksContainer {
+  width: 100%;
+}
 
 /* Responsive 
 @media (max-width: 700px) {

@@ -60,6 +60,15 @@ margin: 0rem 0.5rem;
   /*border-radius: 5px;*/
   padding: 0.2rem;
   flex-direction: column;
+
+  transition: transform 180ms ease;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.bookCard:hover{
+  cursor:pointer;
+  transform: translateY(-4px) scale(1.03);
 }
 
 .bookDesc{
