@@ -3,7 +3,8 @@
   top: 0;
   z-index: 100;
   width: 100%;
-  background: rgb(var(--black-on-light-rgb),0.8);
+  background-color: rgb(var(--black-on-light-rgb),0.8);
+  background: linear-gradient(to bottom,#1a1c20,84%,transparent);
   color: var(--white-on-dark);
   border-radius: none;
   display: flex;
