@@ -37,7 +37,7 @@ export async function BookCarousel({subject_comp,Section_title}:{subject_comp: s
   //console.log("SUBJECT",subject_comp)
   return (
     <section className={styles.bookGrid_container}>
-      <BookCardsCarousel books={books ?? []}/>
+      <BookCardsCarousel books={books ?? []} subject_carousel={subject_comp}/>
       <div className={styles.label}>
       <p>{Section_title}</p>
       </div>

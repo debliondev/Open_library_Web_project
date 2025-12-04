@@ -25,6 +25,7 @@
 
 
 .menuBtn {
+  visibility: hidden;
   background: none;
   border: none;
   cursor: pointer;
