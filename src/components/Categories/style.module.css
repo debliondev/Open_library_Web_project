@@ -20,9 +20,7 @@
 
   transition: transform 180ms ease, background-color 180ms ease;
   transform-origin: center;
-  will-change: transform;
-
-
+  
   outline: none;
   cursor: pointer;
 

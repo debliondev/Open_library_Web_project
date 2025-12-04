@@ -6,11 +6,22 @@
     box-sizing: border-box;
 }
 
+.emptyGrid{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: var(--white-on-dark);
+    font-family: var(--font-geist-mono), monospace;
+    font-size: 2rem;
+    text-align: center;
+    padding: 2rem 0;
+}
+
 .bookCard{
     display: flex;
     gap: 0.6rem;
     align-items: center;
-    background-color: rgb(var(--brown1-seccondary-rgb), 0.5);
+    background-color: rgb(var(--brown1-seccondary-rgb), 0.3);
     border: 1px solid var(--brown1-seccondary);
     padding: 1.5rem 0.5rem;
     border-radius: 5px;
@@ -21,7 +32,9 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
+    background-color: rgb(var(--brown3-lighted-rgb),0.3);
+    padding: 1.2rem 0.8rem;
 }
 
 .bookTitle{
@@ -47,18 +60,21 @@
 }
 
 .bookAccess{
-    padding: 0.3rem 0.4rem;
+    padding: 0.4rem;
     background-color: var(--brown2-accent) ;
     font-size: 0.8rem;
     color: var(--white-on-dark);
     font-family: var(--font-geist-mono), monospace;
+    margin: 0.4rem 0rem;
 }
 
 .GetEbookBtt{
-    margin-bottom: 0.4rem;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
     padding: 0.4rem;
-    width: 100%;
-    background-color: var(--primary-focus);
+    margin-bottom: 0.3rem;
+    background-color: rgb(var(--brown3-lighted-rgb),0.5);
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -68,8 +84,12 @@
     transition: background-color 180ms ease;
 }
 
+.GetEbookBtt:hover{
+    background-color: var(--primary-focus);
+}
+
 /* Tablet and up: 2 columns */
-@media (min-width: 640px) {
+@media (min-width: 760px) {
     .bookGrid {
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;

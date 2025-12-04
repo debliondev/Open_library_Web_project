@@ -19,8 +19,8 @@ export default function Home() {
       <HomeTitleSection/>
       </section>
 
+      <Categories />
       <section>
-        <Categories />
         <section style={{backgroundColor: "#1a1c20", padding: "1rem 0rem"}}>
         <div>
           <BookCarousel Section_title={"Trending"} subject_comp={"trending"}/>
