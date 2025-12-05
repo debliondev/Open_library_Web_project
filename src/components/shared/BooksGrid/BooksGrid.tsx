@@ -3,10 +3,12 @@ import Image from "next/image";
 import { fetch_books_search } from "app/services/open_library/books";
 import BookPlaceholder from "../../../../public/Book_cover_icon.svg"
 
+import { Suspense } from "react";
+
 export default async function BooksGrid({ PathParams, }: { PathParams?: { query?: string } | string }) {
     //Support PathParams object or direct string for calling
     const query = typeof PathParams === "string" ? PathParams : PathParams?.query ?? "";
-    console.log("QUERY", query);
+    //console.log("QUERY", query);
 
     const data = await fetch_books_search(query);
 
@@ -19,6 +21,7 @@ export default async function BooksGrid({ PathParams, }: { PathParams?: { query?
             {booksList.length === 0 ? (
                 <div className={styles.emptyGrid}>No books found</div>
             ) : (
+                <Suspense fallback={<div className={styles.emptyGrid}>Loading books...</div>}>
                 <div className={styles.bookGrid} >
                     {
                     booksList.map((book: any, idx: number) => {
@@ -46,10 +49,10 @@ export default async function BooksGrid({ PathParams, }: { PathParams?: { query?
                                         width={146}
                                         height={220}
                                         alt={title}
-                                        loading="eager"                                     
+                                        loading="lazy"                                     
                                     />
                                 </div>
-                                <section className={styles.book_Desc}>
+                                <section className={styles.bookDesc}>
                                 <div className={styles.bookInfo}>
                                     <h4 className={styles.bookTitle}>{title}</h4>
                                     <p>by {author}</p>
@@ -65,6 +68,7 @@ export default async function BooksGrid({ PathParams, }: { PathParams?: { query?
                     })
                     }
                 </div>
+                </Suspense>
             )}
         </div>
     );

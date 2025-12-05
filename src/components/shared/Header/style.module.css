@@ -10,7 +10,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1rem 0.5rem;
+  padding: 1.5rem 1rem;
   box-sizing: border-box;
 }
 
@@ -23,15 +23,20 @@
   color: var(--brown3-lighted);
 }
 
+.navSection{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
 
 .menuBtn {
   visibility: hidden;
+  display: flex;
+  align-items: center;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
-  display: flex;
-  align-items: center;
+  /*padding: 0.5rem;*/
 }
 .menuBtn svg {
   width: 24px;
