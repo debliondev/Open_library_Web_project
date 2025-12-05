@@ -31,7 +31,7 @@ margin: 0rem 0.5rem;
   visibility: visible;
 }
 
-.Img_div{
+.Img_div image{
  padding: 0.3rem;
  /*padding-top: 0.8rem;*/
 }
@@ -106,7 +106,7 @@ margin: 0rem 0.5rem;
   line-clamp: 1;
   overflow: hidden;
   text-overflow: ellipsis;
-  font-size: 1.6vh;
+  font-size: 0.6rem;
   font-family: var(--font-geist-mono), monospace;
   line-height: 1;
   margin: 0.5rem 0rem;
@@ -117,7 +117,7 @@ margin: 0rem 0.5rem;
   background-color: var(--brown2-accent) ;
   margin: 0;
   padding: 0.3rem 0.4rem;
-  font-size: 1.8vh;
+  font-size: 0.6rem;
   font-family: var(--font-geist-mono), monospace;
 }
 
@@ -174,4 +174,17 @@ margin: 0rem 0.5rem;
 
 .scrollButton:hover{
   background: rgb(0,0,0, 0.6);
+}
+
+
+.emptyCardsCarousel{
+  width: 100%;
+  color: var(--white-on-dark);
+  font-family: var(--font-geist-mono), monospace;
+  background-color: rgb(var(--brown1-seccondary-rgb), 0.5);
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 0rem;
 }

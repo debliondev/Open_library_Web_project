@@ -4,6 +4,7 @@ import styles from "./style.module.css";
 import { fetch_books } from "app/services/open_library/books";
 
 import BookCardsCarousel from "../BookCardsCarousel/BookCardsCarousel";
+import { Suspense } from "react";
 
   async function render_books_test(subject_parameter:string){
     try{
@@ -37,7 +38,9 @@ export async function BookCarousel({subject_comp,Section_title}:{subject_comp: s
   //console.log("SUBJECT",subject_comp)
   return (
     <section className={styles.bookGrid_container}>
+      <Suspense fallback={<div className={styles.emptyCarousel}>Loading Books...</div>}>
       <BookCardsCarousel books={books ?? []} subject_carousel={subject_comp}/>
+      </Suspense>
       <div className={styles.label}>
       <p>{Section_title}</p>
       </div>

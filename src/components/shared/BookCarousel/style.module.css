@@ -3,6 +3,17 @@
   margin: 1.4rem 0rem;
 }
 
+.emptyCarousel{
+  width: 100%;
+  color: var(--white-on-dark);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 0rem;
+}
+
 .label{
   /*margin: 0rem 1rem 1.6rem;*/
   color: var(--white-on-dark);
