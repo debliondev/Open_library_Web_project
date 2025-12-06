@@ -39,9 +39,11 @@ export default function SearchBar({ explore_page = false }: { explore_page?: boo
         onChange={(e) => setQuery(e.target.value)}
         aria-label="Search books"
       />
+      <div>
       <button className={styles.SearchBttn} type="submit">
         <p>Search</p>
       </button>
+      </div>
     </form>
   );
 }
