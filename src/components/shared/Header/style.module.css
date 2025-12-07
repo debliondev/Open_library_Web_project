@@ -37,6 +37,9 @@
   border: none;
   cursor: pointer;
   /*padding: 0.5rem;*/
+  
+  /*TEMPORARY*/
+  display: none;
 }
 .menuBtn svg {
   width: 24px;

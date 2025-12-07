@@ -55,7 +55,7 @@ async function fetch_books_search(input:string){
         }
 
         const data = await response.json();
-        console.log("Data Response: ",response)
+        //console.log("Data Response: ",response)
         return data ?? {docs:[]};
 
     }catch (error) {
