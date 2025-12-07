@@ -1,0 +1,41 @@
+.explorationContainer {
+  display: flex;
+  flex-direction: row;
+  min-height: 90vh;
+  width: 100%;
+  margin-top: 0.2rem;
+}
+
+.filtersContent {
+  margin-top: 3rem;
+  padding: 1rem;
+}
+
+.mainContent {
+  min-width: 0;
+}
+
+.booksContainer {
+  width: 100%;
+}
+
+/* Responsive 
+@media (max-width: 700px) {
+  .explorationContainer {
+    flex-direction: column;
+  }
+  .sidebar {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    box-shadow: 2px 0 12px rgba(0,0,0,0.12);
+  }
+  .mainContent {
+    padding: 1rem 0.5rem;
+  }
+  .toggleBtn {
+    top: 1rem;
+    right: -2.2rem;
+  }
+}*/

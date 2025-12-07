@@ -1,0 +1,190 @@
+
+.SeeMoreButton{
+  display: flex;
+  justify-content: end;
+  margin: 0rem 0.5rem;
+}
+
+.SeeMoreButton button{
+  font-size: 1rem;
+  background: none;
+  border: none;
+  color: var(--white-on-dark);
+  font-family: var(--font-geist-mono);
+  display: flex;
+  align-items: center;
+}
+
+.SeeMoreButton button:hover{
+  cursor: pointer;
+  color: var(--brown3-lighted);
+  font-size: 1.2rem;
+}
+
+.Carousel{
+display: flex;
+position: relative;
+margin: 0rem 1rem;
+}
+
+.Carousel:hover .scrollButtonContainer{
+  visibility: visible;
+}
+
+.Img_div image{
+ padding: 0.3rem;
+ /*padding-top: 0.8rem;*/
+}
+
+.bookCardsContainer {
+  display: flex;
+  white-space: nowrap;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  gap: 0.5rem;
+  padding: 0.5rem 0rem;
+}
+
+.bookCardsContainer::-webkit-scrollbar{
+    display: none;
+}
+
+.bookCard {
+  /*background-color: var(--brown1-seccondary);*/
+  background-color: rgb(var(--brown1-seccondary-rgb), 0.5);
+  border: 2px solid;
+  border-color: var(--brown1-seccondary);
+  text-align: left;
+  color: var(--white-on-dark);
+  display: flex;
+  /*border-radius: 5px;*/
+  padding: 0.2rem;
+  flex-direction: column;
+
+  transition: transform 180ms ease;
+  transform-origin: center;
+  will-change: transform;
+}
+
+.bookCard:hover{
+  cursor:pointer;
+  transform: translateY(-4px) scale(1.03);
+}
+
+.bookDesc{
+  /*padding: 0rem 0.3rem 0.3rem;*/
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.Desc_Container{
+  padding: 0rem 0.3rem 0.3rem;
+}
+
+.bookTitle{
+  text-wrap: balance;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /*font-size: 1.9vh;*/
+  font-size: 0.8rem;
+  font-family: var(--font-geist-mono), monospace;
+  line-height: 1.2;
+  margin: 0rem 0rem 0.2rem;
+}
+
+.bookAuthor{
+  text-wrap: balance;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  line-clamp: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 0.6rem;
+  font-family: var(--font-geist-mono), monospace;
+  line-height: 1;
+  margin: 0.5rem 0rem;
+  /*margin: 1rem 0rem;*/
+}
+
+.bookAccess{
+  background-color: var(--brown2-accent) ;
+  margin: 0;
+  padding: 0.3rem 0.4rem;
+  font-size: 0.6rem;
+  font-family: var(--font-geist-mono), monospace;
+}
+
+.bookTitle:hover{
+  cursor:pointer
+}
+
+.moreBooksBtn {
+  background: #85c6be;
+  color: #fff;
+  border: none;
+  border-radius: 20px;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+
+.scrollButtonContainer{
+  z-index: 4;
+  display: flex;
+  visibility: hidden;
+
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  align-items: center;
+  justify-content: center;
+  /*width: 2.8rem;*/
+  height: 95%;
+  pointer-events: auto;
+  /*background-color: rgb(var(--brown1-seccondary-rgb), 0.6);*/
+}
+
+.scrollButtonContainer:first-child{
+  left: -3;
+}
+
+.scrollButtonContainer:last-child{
+  right: -3;
+}
+
+.scrollButton{
+  z-index: 6;
+  background: rgb(0,0,0, 0.3);
+  color: var(--white-on-dark);
+  border:none;
+  width: 2.5rem;
+  height: 100%;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.scrollButton:hover{
+  background: rgb(0,0,0, 0.6);
+}
+
+
+.emptyCardsCarousel{
+  width: 100%;
+  color: var(--white-on-dark);
+  font-family: var(--font-geist-mono), monospace;
+  background-color: rgb(var(--brown1-seccondary-rgb), 0.5);
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 0rem;
+}

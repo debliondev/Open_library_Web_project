@@ -1,87 +1,29 @@
 
-.Carousel{
-display: flex;
-/*background-color: var(--brown1-seccondary);*/
-/*margin: 0rem 1rem;*/
+.bookGrid_container{
+  margin: 1.4rem 0rem;
 }
 
-.bookGrid {
+.emptyCarousel{
+  width: 100%;
+  color: var(--white-on-dark);
+  font-family: var(--font-geist-mono), monospace;
+  font-size: 2rem;
   display: flex;
-  white-space: nowrap;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  gap: 1rem;
-  padding: 1rem;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem 0rem;
 }
 
-.bookGrid::-webkit-scrollbar{
-    display: none;
-}
-
-.bookCard {
-  background: var(--brown2-accent);
-  border-radius: 10px;
-  padding: 1rem 0.5rem;
-  text-align: left;
+.label{
+  /*margin: 0rem 1rem 1.6rem;*/
   color: var(--white-on-dark);
   display: flex;
-  flex-direction: column;
-}
-
-.bookCard div{
-  /*padding: 2rem;*/
-  height: 5rem;
+  justify-content: center;
   background-color: var(--primary-focus);
-  display: flex;
 }
 
-.bookTitle{
-  text-wrap: balance;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  line-clamp: 2;
-  overflow: hidden;
-  text-overflow: ellipsis;
+.label p{
   font-size: 1rem;
-  line-height: 1.2;
-  margin: 0.5rem;
-}
-
-
-.bookTitle:hover{
-  cursor:pointer
-}
-
-.moreBooksBtn {
-  grid-column: span 2;
-  background: #85c6be;
-  color: #fff;
-  border: none;
-  border-radius: 20px;
-  padding: 0.75rem 1.5rem;
-  margin-top: 1rem;
-  cursor: pointer;
-  font-size: 1rem;
-}
-
-
-.scrollButtonContainer{
-  display: flex;
-  align-items: center;
-  background: rgb(var(--black-on-light-rgb), 0.3);
-}
-
-
-.scrollButton{
-  left:0;
-  top: "40%";
-  z-index: 2;
-  background: var(--primary-focus);
-  color: var(--white-on-dark);
-  border:none;
-  border-radius: 50%;
-  width: 2.5rem;
-  height: 2.5rem;
-  cursor: pointer;
+  font-family: var(--font-geist-mono), monospace;
+  margin: 0.4rem;
 }

@@ -1,0 +1,45 @@
+
+.filters{
+    position: relative;
+    z-index: 10;
+    left: 0;
+    /*width: 100%;*/
+}
+
+.sidebar {
+  background: var(--brown3-lighted, #a59476);
+  min-width: 220px;
+  max-width: 260px;
+  transition: transform 0.3s ease, width 0.3s ease;
+  box-shadow: 2px 0 8px rgba(0,0,0,0.07);
+  position: relative;
+  z-index: 2;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.open {
+  transform: translateX(0);
+  width: 220px;
+}
+
+.closed {
+  transform: translateX(-100%);
+  width: 0;
+  display: none;
+}
+
+.toggleBtn {
+  background: var(--brown2-accent, #8f5e51);
+  color: #fff;
+  border: none;
+  border-radius: 0 8px 8px 0;
+  padding: 0.5rem;
+  position: relative;
+  cursor: pointer;
+  z-index: 3;
+  font-size: 1.2rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: right 0.3s;
+}

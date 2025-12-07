@@ -1,57 +1,51 @@
-"use client";
 import styles from "./style.module.css";
-import Image from "next/image";
-import { useRef } from "react";
+//import Image from "next/image";
 
-export default function BookGridCarousel({ books }: { books: any[] }) {
-  const scrollRef = useRef<HTMLDivElement>(null);
+import { fetch_books } from "app/services/open_library/books";
 
-  const scroll = (direction: "left" | "right") => {
-    if (scrollRef.current) {
-      const scrollAmount = 300;
-      scrollRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount,
-        behavior: "smooth",
-      });
+import BookCardsCarousel from "../BookCardsCarousel/BookCardsCarousel";
+import { Suspense } from "react";
+
+  async function render_books_test(subject_parameter:string){
+    try{
+      //console.log("PARAMETER", subject_parameter)
+  
+      if(!subject_parameter){
+        console.log("Error: No subject parameter provided")
+        return[];
+      }
+  
+      const books = await fetch_books(subject_parameter);
+  
+      const books_response = books.docs;
+      //console.log("RESPONSE",books_response.length)
+  
+      if (books_response === undefined) {
+        console.log("ERROR, there are no books")
+      }
+      return books_response
+
+    }catch(err){
+      console.log("Error Fetching the Books:", err)
+      return [];
     }
-  };
 
+}
+
+export async function BookCarousel({subject_comp,Section_title}:{subject_comp: string; Section_title?: string}) {
+  //{await render_books_test()}
+  const books = await render_books_test(subject_comp);
+  //console.log("SUBJECT",subject_comp)
   return (
-    <section className={styles.Carousel}>
-      <div className={styles.scrollButtonContainer}>
-      <button
-        aria-label="Scroll left"
-        onClick={() => scroll("left")}
-        className={styles.scrollButton}
-      >
-        &#8592;
-      </button>
-      </div>
-      <div ref={scrollRef} className={styles.bookGrid}>
-        {books.map((book, idx) => (
-          <article key={idx} className={styles.bookCard}>
-            <Image
-              src={"https://covers.openlibrary.org/b/olid/OL31754751M-M.jpg"}
-              width={150}
-              height={250}
-              alt={book.title}
-              loading="eager"
-            />
-            <div>
-              <h4 className={styles.bookTitle}>{book.title}</h4>
-            </div>
-          </article>
-        ))}
-      </div>
-      <div className={styles.scrollButtonContainer}>
-      <button
-        aria-label="Scroll right"
-        onClick={() => scroll("right")}
-        className={styles.scrollButton}
-      >
-        &#8594;
-      </button>
+    <section className={styles.bookGrid_container}>
+      <Suspense fallback={<div className={styles.emptyCarousel}>Loading Books...</div>}>
+      <BookCardsCarousel books={books ?? []} subject_carousel={subject_comp}/>
+      </Suspense>
+      <div className={styles.label}>
+      <p>{Section_title}</p>
       </div>
     </section>
   );
 }
+
+

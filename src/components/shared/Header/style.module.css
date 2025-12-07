@@ -3,24 +3,43 @@
   top: 0;
   z-index: 100;
   width: 100%;
-  background: rgb(var(--black-on-light-rgb),0.8);
+  background-color: rgb(var(--black-on-light-rgb),0.8);
+  background: linear-gradient(to bottom,#1a1c20,84%,transparent);
   color: var(--white-on-dark);
   border-radius: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 1rem;
+  padding: 1.5rem 1rem;
   box-sizing: border-box;
 }
 
+.HeaderTitle{
+  font-weight: 600;
+  color: var(--white-on-dark);
+}
+
+.HeaderTitle:hover{
+  color: var(--brown3-lighted);
+}
+
+.navSection{
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
 
 .menuBtn {
+  visibility: hidden;
+  display: flex;
+  align-items: center;
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0.5rem;
-  display: flex;
-  align-items: center;
+  /*padding: 0.5rem;*/
+  
+  /*TEMPORARY*/
+  display: none;
 }
 .menuBtn svg {
   width: 24px;

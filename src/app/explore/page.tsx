@@ -1,22 +1,15 @@
-import SearchBar from "app/components/shared/SearchBar/SearchBar"
-import BookFilters from "app/components/book_filters/bookFilters"
-import { BookGrid } from "app/components/shared/BookGrid/BookGrid"
-import DisplayBook from "app/components/display_book/displayBook"
+import BookExplorationPage from "app/components/bookExploration/bookExploration";
 
-export default function explorer(){
+export default async function explorer({ searchParams, }: { searchParams?: { q?: string } }) {
+    //const q = (searchParams?.q ?? "").toString();
+    const findParams = await searchParams
 
-    return(
+    const q = (findParams?.q ?? "").toString();
+
+    console.log("BOOK PARAMS", q);
+    return (
         <main>
-            <section>
-                    <BookFilters/>
-                    
-                <section style={{margin: "1rem"}} >
-                <SearchBar/>
-                <BookGrid/>
-                <BookGrid/>
-                <BookGrid/>
-                </section>
-            </section>
+            <BookExplorationPage searchParams={{ q }} />
         </main>
-    )
+    );
 }
