@@ -37,7 +37,7 @@ export default function BookCardsCarousel({ books,subject_carousel }: { books: a
 
   //borderColor:"#8f5e51"
   return (
-    <section>
+    <section className={styles.CarouselContainer}>
       <Suspense>
         <div className={styles.SeeMoreButton}>
         <button onClick={()=> explore_subject(subject_carousel)}>See more

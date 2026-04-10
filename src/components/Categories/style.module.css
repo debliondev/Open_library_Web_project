@@ -1,12 +1,15 @@
 .categories {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   /*margin: 1rem 2rem;*/
   padding: 1rem;
   flex-wrap: wrap;
-  background-color: var(--black-on-light);
+  /*background-color: var(--black-on-light);
   background: linear-gradient(to top,#1a1c20,70%, transparent);
+  */
+  background-color: rgb(var(--brown1-seccondary-rgb),0.6);
 }
 
 .category {
