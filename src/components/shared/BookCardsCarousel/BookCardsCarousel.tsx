@@ -6,7 +6,7 @@ import styles from "./style.module.css";
 import Image from "next/image";
 import { Suspense, use, useRef } from "react";
 
-import BookPlaceholder from "../../../../public/Book_cover_icon.svg"
+import BookPlaceholder from "../../../../public/images/no_cover.png"
 
 export default function BookCardsCarousel({ books,subject_carousel }: { books: any[],subject_carousel: string }) {
   const scrollRef = useRef<HTMLDivElement| null>(null);
@@ -53,7 +53,7 @@ export default function BookCardsCarousel({ books,subject_carousel }: { books: a
             onClick={() => scroll("left")}
             className={styles.scrollButton}
           >
-            &#8592;
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19V5"/><path d="m13 6-6 6 6 6"/><path d="M7 12h14"/></svg>
           </button>
           </div>
         <div ref={scrollRef} className={styles.bookCardsContainer}>
@@ -95,7 +95,7 @@ export default function BookCardsCarousel({ books,subject_carousel }: { books: a
             onClick={() => scroll("right")}
             className={styles.scrollButton}
           >
-            &#8594;
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 12H3"/><path d="m11 18 6-6-6-6"/><path d="M21 5v14"/></svg>
           </button>
           </div>
       </section>

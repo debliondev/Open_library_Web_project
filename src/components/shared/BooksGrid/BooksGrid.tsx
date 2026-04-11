@@ -1,7 +1,7 @@
 import styles from "./style.module.css";
 import Image from "next/image";
 import { fetch_books_search } from "app/services/open_library/books";
-import BookPlaceholder from "../../../../public/Book_cover_icon.svg"
+import BookPlaceholder from "../../../../public/images/no_cover.png"
 
 import { Suspense } from "react";
 
