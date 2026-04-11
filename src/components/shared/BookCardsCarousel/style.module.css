@@ -1,6 +1,8 @@
 
 .CarouselContainer{
-  /*background-color: rgb(var(--brown1-seccondary-rgb), 0.2);*/
+  /*background-color: rgb(var(--brown1-seccondary-rgb), 0.2);
+  margin: 0 1rem;
+  */
   padding-top: 1rem;
 }
 
@@ -23,13 +25,14 @@
 .SeeMoreButton button:hover{
   cursor: pointer;
   color: var(--brown3-lighted);
-  font-size: 1.2rem;
 }
 
 .Carousel{
 display: flex;
 position: relative;
-padding: 0rem 1rem;
+margin: 0rem 1rem;
+padding: 0 2rem;
+
 }
 
 .Carousel:hover .scrollButtonContainer{
@@ -45,9 +48,11 @@ padding: 0rem 1rem;
   display: flex;
   white-space: nowrap;
   overflow-x: scroll;
-  overflow-y: hidden;
+  overflow-y: visible;
   gap: 0.5rem;
-  padding: 0.5rem 0rem;
+  /*padding: 0.5rem 0rem;*/
+  padding: .8rem .5rem .3rem;
+  padding-top: 1rem;
 }
 
 .bookCardsContainer::-webkit-scrollbar{
@@ -55,7 +60,6 @@ padding: 0rem 1rem;
 }
 
 .bookCard {
-  /*background-color: var(--brown1-seccondary);*/
   background-color: rgb(var(--brown1-seccondary-rgb), 0.5);
   border: 2px solid;
   border-color: var(--brown1-seccondary);
@@ -73,7 +77,8 @@ padding: 0rem 1rem;
 
 .bookCard:hover{
   cursor:pointer;
-  transform: translateY(-4px) scale(1.03);
+  z-index: 20;
+  transform: translateY(-8px) scale(1.05);
 }
 
 .bookDesc{
@@ -148,7 +153,7 @@ padding: 0rem 1rem;
   visibility: hidden;
 
   position: absolute;
-  top: 50%;
+  top: 52%;
   transform: translateY(-50%);
   align-items: center;
   justify-content: center;

@@ -19,9 +19,9 @@ export default function Home() {
       <HomeTitleSection/>
       </section>
 
-      <section style={{backgroundColor: "#1a1c20"}}>
       <Categories />
-        <section style={{paddingTop: "1rem"}}>
+      <section style={{backgroundColor: "#1a1c20"}}>
+        <section>
         <div style={{backgroundColor: "#1a1c20"}}>
           <BookCarousel Section_title={"Trending"} subject_comp={"trending"}/>
           <BookCarousel Section_title={"Horror"} subject_comp={"horror"}/>
