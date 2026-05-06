@@ -53,7 +53,7 @@ export default function BookCardsCarousel({ books,subject_carousel }: { books: a
             onClick={() => scroll("left")}
             className={styles.scrollButton}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 19V5"/><path d="m13 6-6 6 6 6"/><path d="M7 12h14"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 19V5"/><path d="m13 6-6 6 6 6"/><path d="M7 12h14"/></svg>
           </button>
           </div>
         <div ref={scrollRef} className={styles.bookCardsContainer}>
@@ -67,10 +67,10 @@ export default function BookCardsCarousel({ books,subject_carousel }: { books: a
               return(
               <article key={idx} className={styles.bookCard} onClick={()=> searchBook(book.cover_edition_key)}>
                 <div className={styles.Img_div}>
-                <Image style={{border:"2px solid",backgroundColor: "rgba(165,148,118,0.3)" }}
+                <Image style={{/*backgroundColor: "rgba(165,148,118,0.3)"*/ }}
                   src={imgSrc}
-                  width={136}
-                  height={200}
+                  width={180}
+                  height={260}
                   alt={book.title ?? "Book cover"}
                   loading="lazy"
                 />
@@ -95,7 +95,7 @@ export default function BookCardsCarousel({ books,subject_carousel }: { books: a
             onClick={() => scroll("right")}
             className={styles.scrollButton}
           >
-            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 12H3"/><path d="m11 18 6-6-6-6"/><path d="M21 5v14"/></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"><path d="M17 12H3"/><path d="m11 18 6-6-6-6"/><path d="M21 5v14"/></svg>
           </button>
           </div>
       </section>
