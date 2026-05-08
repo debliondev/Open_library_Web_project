@@ -34,3 +34,14 @@
   background-color: color-mix(in srgb, var(--primary-focus) 82%, white 18%);
   color: var(--white-on-dark);
 }
+
+.category:active{
+  transform: scale(0.96);
+  transition-duration: 80ms;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .category{
+    transition: none;
+  }
+}

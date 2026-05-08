@@ -19,6 +19,50 @@
   flex-direction: column;
 }
 
+.sidebar ul{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li{
+  position: relative;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: padding-left 0.2s ease;
+  overflow: hidden;
+}
+
+.sidebar li::before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 3px;
+  height: 100%;
+  background: var(--primary-focus);
+  transform: scaleY(0);
+  transition: transform 0.2s ease;
+  transform-origin: top;
+}
+
+.sidebar li:hover{
+  padding-left: 1.5rem;
+  background: rgba(0,0,0,0.05);
+}
+
+.sidebar li:hover::before{
+  transform: scaleY(1);
+}
+
+.sidebar button{
+  transition: background-color 180ms ease, transform 100ms ease;
+}
+
+.sidebar button:active{
+  transform: scale(0.97);
+}
+
 .open {
   transform: translateX(0);
   width: 220px;
@@ -41,5 +85,13 @@
   z-index: 3;
   font-size: 1.2rem;
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-  transition: right 0.3s;
+  transition: right 0.3s, background-color 180ms ease, transform 100ms ease;
+}
+
+.toggleBtn:hover{
+  background: color-mix(in srgb, var(--brown2-accent) 85%, white 15%);
+}
+
+.toggleBtn:active{
+  transform: scale(0.92);
 }

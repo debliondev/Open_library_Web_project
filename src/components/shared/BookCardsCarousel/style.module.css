@@ -38,7 +38,8 @@ background-color: rgb(var(--brown2-accent-rgb), 0.3);
 }
 
 .Carousel:hover .scrollButtonContainer{
-  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
 }
 
 .Img_div image{
@@ -72,7 +73,7 @@ background-color: rgb(var(--brown2-accent-rgb), 0.3);
   padding: 0.6rem;
   flex-direction: column;
 
-  transition: transform 180ms ease;
+  transition: transform 180ms ease, box-shadow 180ms ease;
   transform-origin: center;
   will-change: transform;
 }
@@ -81,6 +82,7 @@ background-color: rgb(var(--brown2-accent-rgb), 0.3);
   cursor:pointer;
   z-index: 20;
   transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
 }
 
 .bookDesc{
@@ -153,17 +155,17 @@ background-color: rgb(var(--brown2-accent-rgb), 0.3);
 .scrollButtonContainer{
   z-index: 4;
   display: flex;
-  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
 
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   align-items: center;
   justify-content: center;
-  /*width: 2.8rem;*/
   height: 100%;
-  pointer-events: auto;
-  /*background-color: rgb(var(--brown1-seccondary-rgb), 0.6);*/
+
+  transition: opacity 0.3s ease;
 }
 
 .scrollButtonContainer:first-child{
@@ -200,4 +202,16 @@ background-color: rgb(var(--brown2-accent-rgb), 0.3);
   justify-content: center;
   text-align: center;
   padding: 2rem 0rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .bookCard{
+    transition: none;
+  }
+  .scrollButtonContainer{
+    transition: none;
+  }
+  .scrollButton{
+    transition: none;
+  }
 }
