@@ -8,6 +8,7 @@ import Footer from "app/components/shared/Footer/Footer";
 
 
 import "./global.css";
+import "../styles/animations.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

@@ -1,15 +1,16 @@
 "use client";
-//import { Autour_One } from "next/font/google";
 
 import { useRouter } from "next/navigation";
+import { useInView } from "app/hooks/useInView";
 import styles from "./style.module.css";
 import Image from "next/image";
-import { Suspense, use, useRef } from "react";
+import { Suspense, useRef } from "react";
 
 import BookPlaceholder from "../../../../public/images/no_cover.png"
 
 export default function BookCardsCarousel({ books,subject_carousel }: { books: any[],subject_carousel: string }) {
   const scrollRef = useRef<HTMLDivElement| null>(null);
+  const [sectionRef, isInView] = useInView<HTMLElement>({ threshold: 0.1 });
 
   const scroll = (direction: "left" | "right") => {
     if (scrollRef.current) {
@@ -37,7 +38,11 @@ export default function BookCardsCarousel({ books,subject_carousel }: { books: a
 
   //borderColor:"#8f5e51"
   return (
-    <section className={styles.CarouselContainer}>
+    <section
+      ref={sectionRef}
+      className={`${styles.CarouselContainer}${isInView ? " animate-fadeIn" : ""}`}
+      style={{ opacity: isInView ? undefined : 0 }}
+    >
       <Suspense>
         <div className={styles.SeeMoreButton}>
         <button onClick={()=> explore_subject(subject_carousel)}>See more

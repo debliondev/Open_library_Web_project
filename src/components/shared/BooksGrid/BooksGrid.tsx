@@ -22,7 +22,7 @@ export default async function BooksGrid({ PathParams, }: { PathParams?: { query?
                 <div className={styles.emptyGrid}>No books found</div>
             ) : (
                 <Suspense fallback={<div className={styles.emptyGrid}>Loading books...</div>}>
-                <div className={styles.bookGrid} >
+                <div className={`${styles.bookGrid} animate-fadeIn`} >
                     {
                     booksList.map((book: any, idx: number) => {
                         const coverId = book.cover_i ?? book.cover_edition_key ?? null;
