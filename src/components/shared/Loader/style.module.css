@@ -1,0 +1,55 @@
+.skeletonContainer{
+  display: flex;
+  gap: 1rem;
+  padding: 1rem 0.5rem;
+  overflow: hidden;
+}
+
+.skeletonCard{
+  flex-shrink: 0;
+  width: 180px;
+  border-radius: 5px;
+  overflow: hidden;
+  background: rgb(var(--brown1-seccondary-rgb), 0.15);
+  border: 1px solid rgb(var(--brown1-seccondary-rgb), 0.3);
+}
+
+.skeletonImg{
+  width: 100%;
+  height: 220px;
+  background: linear-gradient(
+    90deg,
+    rgb(var(--brown3-lighted-rgb), 0.08) 0%,
+    rgb(var(--brown3-lighted-rgb), 0.2) 50%,
+    rgb(var(--brown3-lighted-rgb), 0.08) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+.skeletonText{
+  padding: 0.5rem;
+}
+
+.skeletonLine{
+  height: 0.7rem;
+  margin-bottom: 0.4rem;
+  border-radius: 3px;
+  background: linear-gradient(
+    90deg,
+    rgb(var(--brown3-lighted-rgb), 0.08) 0%,
+    rgb(var(--brown3-lighted-rgb), 0.2) 50%,
+    rgb(var(--brown3-lighted-rgb), 0.08) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 1.5s ease-in-out infinite;
+}
+
+.skeletonLine:last-child{
+  width: 60%;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
