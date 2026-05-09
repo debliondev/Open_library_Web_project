@@ -24,6 +24,11 @@
   margin-bottom: 1rem;
 }
 
+.ImgContainer{
+  position: absolute;
+  inset: 0;
+}
+
 .Image_style{
   z-index: -1;
   opacity: 0.36;

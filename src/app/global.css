@@ -1,4 +1,5 @@
 :root{
+    /*Color variables*/
     --black-on-light: #1a1c20;
     --black-on-light-rgb: 26, 28, 32;
     --white-on-dark: #e9ebf2;
@@ -11,6 +12,13 @@
     --brown2-accent-rgb: 143, 94, 81;
     --brown3-lighted: #a59476;
     --brown3-lighted-rgb: 165, 148, 118;
+
+    /*Sizes variables
+    -breakpoint-sm: 40rem;
+    -breakpoint-md: 48rem;
+    -breakpoint-lg: 64rem;
+    -breakpoint-xl: 80rem;
+    */
 }
 
 body{

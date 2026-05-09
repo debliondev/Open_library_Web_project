@@ -21,6 +21,7 @@
 
 .HeaderTitle:hover{
   color: var(--brown3-lighted);
+  transition-duration: 80ms;
 }
 
 .navSection{
