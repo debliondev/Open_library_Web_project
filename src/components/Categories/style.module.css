@@ -29,8 +29,7 @@
 
 .category:hover{
   cursor: pointer;
-
-  transform: translateY(-4px) scale(1.03);
+  transform: translateY(-4px) scale(1.04);
   background-color: color-mix(in srgb, var(--primary-focus) 82%, white 18%);
   color: var(--white-on-dark);
 }
