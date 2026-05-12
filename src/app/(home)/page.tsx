@@ -1,7 +1,7 @@
 import HomeTitleSection from "app/components/HomeTitleSection/HomeTitleSection";
 import Categories from "app/components/Categories/Categories";
-import AboutSection from "app/components/AboutSection/AboutSection";
-//import SearchBar from "app/components/shared/SearchBar/SearchBar";
+//import AboutSection from "app/components/AboutSection/AboutSection";
+
 
 import { BookCarousel } from "app/components/shared/BookCarousel/BookCarousel";
 
@@ -30,7 +30,7 @@ export default function Home() {
         </div>
         </section>
       </section>
-      <AboutSection />
+      {/*<AboutSection />*/}
     </main>
   );
 }

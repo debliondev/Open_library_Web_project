@@ -12,9 +12,11 @@ export default function Header() {
       <Link href={"/"} style={{textDecoration:"none"}}>
       <span aria-label="Website Title" className={styles.HeaderTitle}>Home</span>
       </Link>
+      {/*
       <Link href={"#AboutUS"} style={{textDecoration:"none"}}>
       <span aria-label="Website Title" className={styles.HeaderTitle}>About Us</span>
       </Link>
+      */}
       <Link href={"/explore"} style={{textDecoration:"none"}}>
       <span aria-label="Website Title" className={styles.HeaderTitle}>Explore</span>
       </Link>
