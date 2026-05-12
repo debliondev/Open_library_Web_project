@@ -7,6 +7,7 @@ import Image from "next/image";
 import { Suspense, useRef } from "react";
 
 import BookPlaceholder from "../../../../public/images/no_cover.png"
+import Loader_component from "app/components/shared/Loader/loader";
 
 export default function BookCardsCarousel({ books,subject_carousel }: { books: any[],subject_carousel: string }) {
   const scrollRef = useRef<HTMLDivElement| null>(null);
@@ -43,14 +44,7 @@ export default function BookCardsCarousel({ books,subject_carousel }: { books: a
       className={`${styles.CarouselContainer}${isInView ? " animate-fadeIn" : ""}`}
       style={{ opacity: isInView ? undefined : 0 }}
     >
-      <Suspense>
-        <div className={styles.SeeMoreButton}>
-        <button onClick={()=> explore_subject(subject_carousel)}>See more
-          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
-              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m9 5 7 7-7 7"/>
-          </svg>
-        </button>
-        </div>
+      <Suspense fallback={<Loader_component/>}>
       <section className={styles.Carousel}>
           <div className={styles.scrollButtonContainer}>
           <button
@@ -61,6 +55,14 @@ export default function BookCardsCarousel({ books,subject_carousel }: { books: a
             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M3 19V5"/><path d="m13 6-6 6 6 6"/><path d="M7 12h14"/></svg>
           </button>
           </div>
+        
+        <div className={styles.SeeMoreButton}>
+        <button onClick={()=> explore_subject(subject_carousel)}>See more
+          <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+              <path stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="m9 5 7 7-7 7"/>
+          </svg>
+        </button>
+        </div>
         <div ref={scrollRef} className={styles.bookCardsContainer}>
           {bookList.length === 0 ?(
             <div className={styles.emptyCardsCarousel}>Server Error, no books to be displayed</div>
@@ -72,7 +74,7 @@ export default function BookCardsCarousel({ books,subject_carousel }: { books: a
               return(
               <article key={idx} className={styles.bookCard} onClick={()=> searchBook(book.cover_edition_key)}>
                 <div className={styles.Img_div}>
-                <Image style={{/*backgroundColor: "rgba(165,148,118,0.3)"*/ }}
+                <Image style={{/*backgroundColor: "rgba(165,148,118,0.3)"*/ borderTopLeftRadius:5, borderTopRightRadius:5}}
                   src={imgSrc}
                   width={180}
                   height={260}
@@ -85,15 +87,17 @@ export default function BookCardsCarousel({ books,subject_carousel }: { books: a
                     <h4 className={styles.bookTitle}>{book.title}</h4>
                     <p className={styles.bookAuthor}>by {book?.author_name?.[0] ?? "Error: Unknown Author"}</p>
                   </div>
-                  <div style={{marginTop:"1rem"}}>
-                    <p className={styles.bookAccess}>{book?.ebook_access ?? "unclassified"}</p>
-                  </div>
+                  
                 </section>
+                <div style={{}}>
+                    <p className={styles.bookAccess}>{book?.ebook_access ?? "unclassified"}</p>
+                </div>
               </article>
               )
             })
           )}
         </div>
+        
           <div className={styles.scrollButtonContainer}>
           <button
             aria-label="Scroll right"

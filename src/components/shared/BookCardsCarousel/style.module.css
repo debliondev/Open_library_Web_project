@@ -3,13 +3,15 @@
   /*background-color: rgb(var(--brown1-seccondary-rgb), 0.2);
   margin: 0 1rem;
   */
-  padding-top: 1rem;
+  padding-top: 1.5rem;
+  overflow-x: hidden;
 }
 
 .SeeMoreButton{
-  display: flex;
-  justify-content: end;
-  margin: 0rem 0.5rem;
+  position: absolute;
+  right: -10px;
+  top: -18px;
+  margin: 0.4rem;
 }
 
 .SeeMoreButton button{
@@ -25,16 +27,16 @@
 .SeeMoreButton button:hover{
   cursor: pointer;
   color: var(--brown3-lighted);
+  transition-duration: 80ms;
 }
+
 
 .Carousel{
 display: flex;
 position: relative;
-margin: 0.5rem;
 margin-bottom: 0;
-padding: 0 2.5rem;
-background-color: rgb(var(--brown2-accent-rgb), 0.3);
-
+padding: 0 2rem;
+background: linear-gradient(to top,rgb(var(--brown1-seccondary-rgb),0.25), 85%,transparent);
 }
 
 @media (max-width: 40rem) {
@@ -55,13 +57,15 @@ background-color: rgb(var(--brown2-accent-rgb), 0.3);
 }
 
 .bookCardsContainer {
+  width: 100%;
   display: flex;
   white-space: nowrap;
-  overflow-x: scroll;
+  overflow-x: auto;
   overflow-y: visible;
   gap: 1rem;
-  /*padding: 0.5rem 0rem;*/
-  padding: 1rem .5rem;
+  margin: .4rem;
+  padding: .5rem;
+  padding-top: 1.5rem;
 }
 
 .bookCardsContainer::-webkit-scrollbar{
@@ -69,15 +73,15 @@ background-color: rgb(var(--brown2-accent-rgb), 0.3);
 }
 
 .bookCard {
-  background-color:rgb(var(--black-on-light-rgb));
+  background:rgb(var(--black-on-light-rgb), 0.35);
   border: 2px solid;
-  border-color: var(--brown1-seccondary);
+  border-color: rgb(var(--brown1-seccondary-rgb), 0.5);
   text-align: left;
+  border-radius: 5px;
   color: var(--white-on-dark);
   display: flex;
   /*border-radius: 5px;
   */
-  padding: 0.6rem;
   flex-direction: column;
 
   transition: transform 180ms ease, box-shadow 180ms ease;
@@ -87,9 +91,9 @@ background-color: rgb(var(--brown2-accent-rgb), 0.3);
 
 .bookCard:hover{
   cursor:pointer;
-  z-index: 20;
-  transform: translateY(-8px) scale(1.05);
-  box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+  transform: translateY(-12px) scale(1.05);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.7);
+  /*box-shadow: 0 4px 8px rgba(var(--primary-focus-rgb),0.8);*/
 }
 
 .bookDesc{
@@ -101,8 +105,8 @@ background-color: rgb(var(--brown2-accent-rgb), 0.3);
 }
 
 .Desc_Container{
-  padding: .5rem 0.3rem;
-  padding-bottom: 0;
+  padding: .3rem .5rem;
+  padding-bottom: .5rem;
 }
 
 .bookTitle{
@@ -116,8 +120,7 @@ background-color: rgb(var(--brown2-accent-rgb), 0.3);
   /*font-size: 1.9vh;*/
   font-size: 0.8rem;
   font-family: var(--font-geist-mono), monospace;
-  line-height: 1.2;
-  margin: 0rem 0rem 0.2rem;
+  margin: 0;
 }
 
 .bookAuthor{
@@ -136,9 +139,11 @@ background-color: rgb(var(--brown2-accent-rgb), 0.3);
 }
 
 .bookAccess{
-  background-color: var(--brown1-seccondary) ;
+  background-color: rgb(var(--primary-focus-rgb), 0.7);
   margin: 0;
-  padding: 0.3rem 0.4rem;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding: 0.3rem 0.5rem;
   font-size: 0.7rem;
   font-family: var(--font-geist-mono), monospace;
 }
@@ -148,7 +153,7 @@ background-color: rgb(var(--brown2-accent-rgb), 0.3);
 }
 
 .moreBooksBtn {
-  background: #85c6be;
+  
   color: #fff;
   border: none;
   border-radius: 20px;
@@ -176,26 +181,31 @@ background-color: rgb(var(--brown2-accent-rgb), 0.3);
 }
 
 .scrollButtonContainer:first-child{
-  left: -1;
+  left: 10;
+}
+
+.scrollButtonContainer:first-child .scrollButton:hover{
+  background: linear-gradient(to right, rgb(var(--black-on-light-rgb)), 60%, transparent)
 }
 
 .scrollButtonContainer:last-child{
-  right: -1;
+  right: 10;
+}
+
+.scrollButtonContainer:last-child .scrollButton:hover{
+  background: linear-gradient(to left, rgb(var(--black-on-light-rgb)), 60%, transparent)
 }
 
 .scrollButton{
   z-index: 6;
-  background: rgb(0,0,0, 0.3);
+  background-color: var(--black-on-light);
   color: var(--white-on-dark);
   border:none;
-  width: 2.5rem;
-  height: 100%;
+  width: 3rem;
+  margin-top: 1rem;
+  height: 90%;
   cursor: pointer;
   transition: background-color 0.3s ease;
-}
-
-.scrollButton:hover{
-  background: rgb(0,0,0, 0.6);
 }
 
 
@@ -203,7 +213,6 @@ background-color: rgb(var(--brown2-accent-rgb), 0.3);
   width: 100%;
   color: var(--white-on-dark);
   font-family: var(--font-geist-mono), monospace;
-  background-color: rgb(var(--brown1-seccondary-rgb), 0.5);
   font-size: 2rem;
   display: flex;
   justify-content: center;
