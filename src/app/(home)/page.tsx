@@ -5,13 +5,6 @@ import Categories from "app/components/Categories/Categories";
 
 import { BookCarousel } from "app/components/shared/BookCarousel/BookCarousel";
 
-export const metadata = {
-  title: 'The eBook Library app',
-  description: 'Welcome to an Ebook library app made in Next JS',
-  keywords: ['eBook', 'API', 'Digital library'],
-};
-
-
 export default function Home() {
   return (
     <main>
