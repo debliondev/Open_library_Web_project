@@ -15,7 +15,7 @@ export default function BookExplorationPage({
     return(
         <section className={styles.explorationContainer}>
             <section className={styles.mainContent}>
-                <section style={{overscrollBehavior: "contain", height: "34rem", overflowY: "auto"}}>
+                <section style={{overscrollBehavior: "contain", height: "36rem", overflowY: "auto"}} className={styles.searchSection}>
                     <section style={{margin:"0rem 1rem 1rem 1rem"}}>
                     <SearchBar explore_page = {true}/>
                     </section>

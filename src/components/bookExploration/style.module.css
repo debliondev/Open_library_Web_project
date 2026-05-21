@@ -15,8 +15,14 @@
   min-width: 0;
 }
 
+.searchSection {
+  scrollbar-color: rgb(var(--brown1-seccondary-rgb), 0.55) transparent;
+}
+
 .booksContainer {
   width: 100%;
+  border-top: 3px solid rgb(var(--brown1-seccondary-rgb), 0.55);
+  padding: 1rem 0;
 }
 
 /* Responsive 

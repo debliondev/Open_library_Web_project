@@ -6,7 +6,7 @@ import BookPlaceholder from "../../../../public/images/no_cover.png"
 import { Suspense } from "react";
 
 export default async function BooksGrid({ PathParams, }: { PathParams?: { query?: string } | string }) {
-    //Support PathParams object or direct string for calling
+    /*Support PathParams object or direct string for calling*/
     const query = typeof PathParams === "string" ? PathParams : PathParams?.query ?? "";
     //console.log("QUERY", query);
 
@@ -17,10 +17,12 @@ export default async function BooksGrid({ PathParams, }: { PathParams?: { query?
     const booksList = Array.isArray(items) ? items : [];
 
     return (
-        <div>
+        <div className={styles.booksGrid_container} >
             {booksList.length === 0 ? (
                 <div className={styles.emptyGrid}>No books found</div>
             ) : (
+                
+                <div>
                 <Suspense fallback={<div className={styles.emptyGrid}>Loading books...</div>}>
                 <div className={`${styles.bookGrid} animate-fadeIn`} >
                     {
@@ -46,8 +48,8 @@ export default async function BooksGrid({ PathParams, }: { PathParams?: { query?
                                         style={{ border: "2px solid",backgroundColor: "rgba(165,148,118,0.3)"
                                         }}
                                         src={imgSrc}
-                                        width={146}
-                                        height={220}
+                                        width={166}
+                                        height={240}
                                         alt={title}
                                         loading="lazy"                                     
                                     />
@@ -69,6 +71,8 @@ export default async function BooksGrid({ PathParams, }: { PathParams?: { query?
                     }
                 </div>
                 </Suspense>
+                </div>
+                
             )}
         </div>
     );

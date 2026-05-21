@@ -1,3 +1,9 @@
+.booksGrid_container{
+    background: linear-gradient(to top,rgb(var(--brown1-seccondary-rgb),0.25), 95%,transparent);
+    width: 100%;
+}
+
+
 .bookGrid{
     display: grid;
     grid-template-columns: 1fr;
@@ -8,13 +14,12 @@
 
 .emptyGrid{
     width: 100%;
+    height: 28rem;
     display: flex;
     justify-content: center;
     color: var(--white-on-dark);
-    font-family: var(--font-geist-mono), monospace;
     font-size: 2rem;
-    text-align: center;
-    padding: 2rem 0;
+    align-items: center;
 }
 
 .bookCard{
@@ -31,7 +36,7 @@
 
 .bookCard:hover{
     transform: translateY(-4px);
-    box-shadow: 0 6px 16px rgba(0,0,0,0.35);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.7);
 }
 
 .bookDesc{
@@ -39,8 +44,8 @@
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
-    background-color: rgb(var(--brown3-lighted-rgb),0.3);
+    justify-content: space-between;
+    background:rgb(var(--black-on-light-rgb), 0.35);
     padding: 1rem 0.8rem;
 }
 
@@ -109,7 +114,7 @@
 }
 
 /* Desktop: 3-4 columns depending on width */
-@media (min-width: 1024px) {
+@media (min-width: 1120px) {
     .bookGrid {
         grid-template-columns: repeat(3, 1fr);
         gap: 1rem 0.6rem;
