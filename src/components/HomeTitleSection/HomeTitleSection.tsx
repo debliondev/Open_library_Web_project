@@ -2,6 +2,7 @@ import styles from "./style.module.css";
 
 import Image from "next/image";
 import background_library from  "../../../public/images/library_stock_image.jpg"
+import { Suspense } from "react";
 
 import SearchBar from "../shared/SearchBar/SearchBar";
 
@@ -20,7 +21,9 @@ export default function HomeTitleSection() {
           />
         </div>
         <div className={`${styles.SearchContainer} animate-fadeInUp`} style={{animationDelay: "0.4s"}}>
-        <SearchBar></SearchBar>
+        <Suspense>
+          <SearchBar></SearchBar>
+        </Suspense>
         </div>
     </section>
   )
